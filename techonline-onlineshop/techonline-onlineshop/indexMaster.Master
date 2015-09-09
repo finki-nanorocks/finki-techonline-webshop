@@ -8,46 +8,41 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
         <link rel="stylesheet" href="css/main.css" type="text/css" />
     </asp:ContentPlaceHolder>
+    <!--Css i scripti odat ovde se prikazuvaat na sekoja strana  -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/s-media.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div style="width:90%; margin:auto">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                <!-- header ke sleduva ovde i footer vo drugite strani samo contentot ke se promeni zavisno tipot na strana-->
+                <!-- header part-->
                 <header id="h">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="logo">
-                                    <img src="img/logo.png" />
-                                </div>
-                            </td>
-                            <td >
-                                <div class="menu-nav">
-                                    <a class="menu-links" href="login.aspx">Login</a> <a class="menu-links" href="home.aspx">Home</a> <a class="menu-links" href="about.aspx">About</a> <a class="menu-links" href="contact.aspx">Contact</a> <a class="menu-links" href="viewCard.aspx">View card</a> <a class="menu-links" href="terms.aspx">Terms</a>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="logo">
+                        <!-- logo ima postaveno ne go trgaj -->     
+                    </div>
+                    <div class="menu-nav">
+                        <a class="menu-links" href="login.aspx">Login</a> 
+                        <a class="menu-links" href="home.aspx">Home</a>
+                         <a class="menu-links" href="about.aspx">About</a>
+                         <a class="menu-links" href="contact.aspx">Contact</a>
+                         <a class="menu-links" href="viewCard.aspx">View card</a>
+                         <a class="menu-links" href="terms.aspx">Terms</a>
+                    </div>
                 </header>
+            </asp:ContentPlaceHolder>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                <!-- ne menuvaj nisto ovde -->
+            </asp:ContentPlaceHolder>
+             <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                <!-- footer part-->
                 <footer id="f">
-                    <table>
-                        <tr>
-                            <td>
-                                <div class="social-media">
-                                    <a href="#">
-                                    <img src="img/facebook.png" width="10%" /></a> <a href="#">
-                                    <img src="img/twitter.png"  width="10%"  /></a> <a href="#">
-                                    <img src="img/google-plus.png"  width="10%" /></a>
+                                <div class="social container" >
+                                    <div class='row'><i class='icon-facebook'></i><i class='icon-twitter'></i><i class='icon-googleplus'></i><span style="font-size:12px" class="clearr"> &copy;&nbsp;&nbsp;NM Solutions&nbsp;&nbsp;2015.&nbsp;&nbsp;All rights reserved.</span></div>
                                 </div>
-                            </td>
-                            <td>
-                                <div class="copyright">
-                                    &copy;&nbsp;&nbsp;NM Solutions&nbsp;&nbsp;2015.&nbsp;&nbsp;All rights reserved.
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
                 </footer>
             </asp:ContentPlaceHolder>
         </div>

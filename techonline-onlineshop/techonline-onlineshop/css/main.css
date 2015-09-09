@@ -11,16 +11,18 @@ body {
     border: 2px solid #808080;
 }
 .logo {
-    width: inherit;
-    height: 94px;
-    margin-right: 150px;
+    background-image:url('/img/logo.png');
+    background-repeat:no-repeat;
+    width: 100%;
+    height: 75px;
+    margin-bottom:-5%;
 }
 
 .menu-nav {
     width: 100%;
     height: 80px;
-    padding-top: 65px;
-    margin-left: 570px;
+    padding-top: 25px;
+    margin-left: 37%;
 }
 
 .menu-links {
@@ -28,7 +30,7 @@ body {
     padding-right: 8px;
     font-style: italic;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 13.5px;
+    font-size: 14.5px;
 }
 
 a {
@@ -55,7 +57,13 @@ a {
     border: 2px solid #808080;
     text-align:center;
 }
-
+@media (max-width: 600px) {
+    .menu-nav a
+    {
+        font-size:11px !important;
+      /*  display:block;            */
+    }
+}
 .social-media {
     width:475px;
     height: inherit;

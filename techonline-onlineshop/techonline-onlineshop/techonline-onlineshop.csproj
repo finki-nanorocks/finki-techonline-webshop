@@ -59,8 +59,11 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="contact.aspx" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\font-awesome.min.css" />
     <Content Include="css\home.css" />
     <Content Include="css\main.css" />
+    <Content Include="css\s-media.css" />
     <Content Include="home.aspx" />
     <Content Include="img\facebook.png" />
     <Content Include="img\google-plus.png" />
