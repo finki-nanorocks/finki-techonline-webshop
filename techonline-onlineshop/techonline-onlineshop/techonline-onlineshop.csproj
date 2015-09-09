@@ -59,8 +59,13 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="contact.aspx" />
+    <Content Include="css\home.css" />
     <Content Include="css\main.css" />
     <Content Include="home.aspx" />
+    <Content Include="img\facebook.png" />
+    <Content Include="img\google-plus.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\twitter.png" />
     <Content Include="js\main.js" />
     <Content Include="login.aspx" />
     <Content Include="terms.aspx" />
@@ -91,6 +96,7 @@
     </Compile>
     <Compile Include="indexMaster.Master.cs">
       <DependentUpon>indexMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="indexMaster.Master.designer.cs">
       <DependentUpon>indexMaster.Master</DependentUpon>
@@ -129,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fonts\" />
-    <Folder Include="img\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

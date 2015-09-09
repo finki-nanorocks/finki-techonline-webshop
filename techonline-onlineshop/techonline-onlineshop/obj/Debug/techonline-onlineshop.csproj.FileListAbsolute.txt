@@ -1,0 +1,6 @@
+C:\Users\milos\Documents\GitHub\techonline\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.dll.config
+C:\Users\milos\Documents\GitHub\techonline\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.dll
+C:\Users\milos\Documents\GitHub\techonline\techonline-onlineshop\techonline-onlineshop\bin\techonline-onlineshop.pdb
+C:\Users\milos\Documents\GitHub\techonline\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.csprojResolveAssemblyReference.cache
+C:\Users\milos\Documents\GitHub\techonline\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.dll
+C:\Users\milos\Documents\GitHub\techonline\techonline-onlineshop\techonline-onlineshop\obj\Debug\techonline-onlineshop.pdb

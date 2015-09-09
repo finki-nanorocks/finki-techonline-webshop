@@ -6,21 +6,51 @@
 <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
+        <link rel="stylesheet" href="css/main.css" type="text/css" />
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-
-
-            <!-- header ke sleduva ovde i footer vo drugite strani samo contentot ke se promeni zavisno tipot na strana-->
-
-
-
-        </asp:ContentPlaceHolder>
-    </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <!-- header ke sleduva ovde i footer vo drugite strani samo contentot ke se promeni zavisno tipot na strana-->
+                <header id="h">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="logo">
+                                    <img src="img/logo.png" />
+                                </div>
+                            </td>
+                            <td >
+                                <div class="menu-nav">
+                                    <a class="menu-links" href="login.aspx">Login</a> <a class="menu-links" href="home.aspx">Home</a> <a class="menu-links" href="about.aspx">About</a> <a class="menu-links" href="contact.aspx">Contact</a> <a class="menu-links" href="viewCard.aspx">View card</a> <a class="menu-links" href="terms.aspx">Terms</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </header>
+                <footer id="f">
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="social-media">
+                                    <a href="#">
+                                    <img src="img/facebook.png" width="10%" /></a> <a href="#">
+                                    <img src="img/twitter.png"  width="10%"  /></a> <a href="#">
+                                    <img src="img/google-plus.png"  width="10%" /></a>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="copyright">
+                                    &copy;&nbsp;&nbsp;NM Solutions&nbsp;&nbsp;2015.&nbsp;&nbsp;All rights reserved.
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </footer>
+            </asp:ContentPlaceHolder>
+        </div>
     </form>
 </body>
 </html>
