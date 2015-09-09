@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace techonline_onlineshop.classes
+namespace techonline_onlineshop.backend
 {
     public class User
     {
-        public short id { get; set;  }
+        public short id { get; set; }
         public String Name { get; set; }
         public String Lastname { get; set; }
         public String Username { get; set; }
