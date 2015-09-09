@@ -22,7 +22,7 @@ body {
     width: 100%;
     height: 80px;
     padding-top: 25px;
-    margin-left: 37%;
+    margin-left: 65%;
 }
 
 .menu-links {
@@ -30,7 +30,7 @@ body {
     padding-right: 8px;
     font-style: italic;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 14.5px;
+    font-size: 15px;
 }
 
 a {
@@ -45,7 +45,7 @@ a {
     a:hover {
         font-style: italic;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        font-size: 13.5px;
+        font-size: 15px;
         text-decoration: none;
         color: #c82323;
     }

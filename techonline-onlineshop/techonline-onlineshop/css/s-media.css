@@ -38,6 +38,7 @@
   -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+    width: 852px;
 }
 .row:first-child i {
   border-right: 1px solid #e8e8e8;
