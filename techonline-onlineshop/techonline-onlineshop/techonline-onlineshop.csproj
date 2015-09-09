@@ -59,16 +59,21 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="contact.aspx" />
+    <Content Include="css\about.css" />
+    <Content Include="css\contact.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\home.css" />
     <Content Include="css\main.css" />
     <Content Include="css\s-media.css" />
     <Content Include="home.aspx" />
+    <Content Include="img\dam-si.jpg" />
     <Content Include="img\facebook.png" />
     <Content Include="img\google-plus.png" />
     <Content Include="img\logo.png" />
+    <Content Include="img\nano.jpg" />
     <Content Include="img\twitter.png" />
+    <Content Include="img\wolfy.jpg" />
     <Content Include="js\main.js" />
     <Content Include="login.aspx" />
     <Content Include="terms.aspx" />

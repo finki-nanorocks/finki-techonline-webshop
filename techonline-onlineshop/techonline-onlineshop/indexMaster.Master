@@ -11,6 +11,8 @@
     <!--Css i scripti odat ovde se prikazuvaat na sekoja strana  -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <link rel="stylesheet" href="css/s-media.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css" />
 
@@ -25,12 +27,7 @@
                         <!-- logo ima postaveno ne go trgaj -->     
                     </div>
                     <div class="menu-nav">
-                        <a class="menu-links" href="login.aspx">Login</a> 
-                        <a class="menu-links" href="home.aspx">Home</a>
-                         <a class="menu-links" href="about.aspx">About</a>
-                         <a class="menu-links" href="contact.aspx">Contact</a>
-                         <a class="menu-links" href="viewCard.aspx">View card</a>
-                         <a class="menu-links" href="terms.aspx">Terms</a>
+                        <a class="menu-links" href="login.aspx">Login</a> <a class="menu-links" href="home.aspx">Home</a> <a class="menu-links" href="about.aspx">About</a> <a class="menu-links" href="contact.aspx">Contact</a> <a class="menu-links" href="viewCard.aspx">View card</a> <a class="menu-links" href="terms.aspx">Terms</a>
                     </div>
                 </header>
             </asp:ContentPlaceHolder>
@@ -41,7 +38,7 @@
                 <!-- footer part-->
                 <footer id="f">
                                 <div class="social container" >
-                                    <div class='row'><i class='icon-facebook'></i><i class='icon-twitter'></i><i class='icon-googleplus'></i><span style="font-size:12px" class="clearr"> &copy;&nbsp;&nbsp;NM Solutions&nbsp;&nbsp;2015.&nbsp;&nbsp;All rights reserved.</span></div>
+                                    <div class='row'><i class='icon-facebook'></i><i class='icon-twitter'></i><i class='icon-googleplus'></i><span style="font-size:12.5px" class="clearr"> &copy;&nbsp;&nbsp;NM Solutions&nbsp;&nbsp;2015.&nbsp;&nbsp;All rights reserved.</span></div>
                                 </div>
                 </footer>
             </asp:ContentPlaceHolder>
