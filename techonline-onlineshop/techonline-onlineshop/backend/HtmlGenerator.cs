@@ -13,10 +13,12 @@ namespace TechonlineAPI
         public static string addCartDropdownItem(List<CartItem> CartItems)
         {
             string html = "";
+            int count = 0;
             foreach (CartItem item in CartItems)
             {
+                count++;
                 html += "<li class='item clearfix'>";
-                html += "<a href = '/?deleteCartItem=" + item.id + "' title='Delete item' class='delete-item'><i class='fa fa-times'></i></a>";
+                html += "<a href = '/home.aspx?deleteCartItem=" + item.product.id + "' title='Delete item' class='delete-item'><i class='fa fa-times'></i></a>";
                 html += "<figure><a href ='/product?id=" + item.product.id + "'><img src='images/products/thumbnails/shoe1.jpg' alt='shoe 1'></a></figure>";
                 html += "<div class='dropdown-cart-details'>";
                 html += "<p class='item-name'><a href='/product?id=" + item.product.id + "'>" + item.product.Name + "</a></p>";
