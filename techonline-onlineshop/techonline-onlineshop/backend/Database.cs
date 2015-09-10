@@ -5,37 +5,43 @@ using System.Web;
 
 namespace TechonlineAPI
 {
-    public static class Database
-    {
-        public static void Connect()
+    public class Database
+    { 
+
+        public Database()
+        {
+            this.Connect();
+        }
+
+        public void Connect()
         {
 
         }
 
-        public static void InsertProduct(Product p)
+        public void InsertProduct(Product p)
         {
 
         }
-        public static void RemoveProduct(Product p)
-        {
-
-        }
-
-        public static void InsertOrder(ShoppingCart p, User u)
-        {
-
-        }
-        public static void RemoveOrder(User u)
+        public void RemoveProduct(Product p)
         {
 
         }
 
-        public static void InsertNewUser(User u)
+        public void InsertOrder(ShoppingCart p, User u)
+        {
+
+        }
+        public void RemoveOrder(User u)
         {
 
         }
 
-        public static void RemoveUser(User u)
+        public void InsertNewUser(User u)
+        {
+
+        }
+
+        public void RemoveUser(User u)
         {
 
         }
