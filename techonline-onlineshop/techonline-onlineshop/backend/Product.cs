@@ -7,20 +7,23 @@ namespace techonline_onlineshop.backend
 {
     public class Product
     {
-        public short id { get; set; }
-
+        public int id { get; set; }
         public String Name { get; set; }
+        public String Description { get; set; }
+        public double Price { get; set; }
+        public double PriceShipping { get; set; }
+        public int Category { get; set; }
 
-        public Double Price { get; set; }
 
-        public List<int> CategoriesBelong { get; set; }
-
-        public Product(int id, String Name, Double Price, List<int> categories)
+        public Product(int id, String Name, String Description, double Price, double PriceShipping, int Category)
         {
             this.id = id;
             this.Name = Name;
+            this.Description = Description;
             this.Price = Price;
-            this.CategoriesBelong = categories;
+            this.PriceShipping = PriceShipping;
+            this.Category = Category;
+           
         }
     }
 }

@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace techonline_onlineshop
 {
-    public partial class _default : System.Web.UI.MasterPage
+    public partial class WebForm1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            ulCartDropdown.InnerHtml = ulCartDropdown.InnerHtml + "<li>My custom item</li>";
+
         }
     }
 }
