@@ -22,6 +22,51 @@ namespace techonline_onlineshop {
         protected global::System.Web.UI.HtmlControls.HtmlLink googlefont;
         
         /// <summary>
+        /// lblCartItemCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCartItemCount;
+        
+        /// <summary>
+        /// lblCartPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblCartPrice;
+        
+        /// <summary>
+        /// ulCartDropdown control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ulCartDropdown;
+        
+        /// <summary>
+        /// lblPriceShipping control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPriceShipping;
+        
+        /// <summary>
+        /// lblPriceTotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblPriceTotal;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

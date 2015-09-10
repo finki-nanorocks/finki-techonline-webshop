@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace techonline_onlineshop.backend
+namespace TechonlineAPI
 {
     public class User
     {
@@ -13,6 +13,7 @@ namespace techonline_onlineshop.backend
         public String Username { get; set; }
         public String Sex { get; set; }
         private DateTime Birthday { get; set; }
+        public bool isAdmin { get; set; }
 
         public User(String Name, String Lastname, String Username, String Sex, DateTime Birthday)
         {

@@ -209,41 +209,6 @@
                             </div><!-- End .carousel-next -->
                         </div><!-- End .carousel-controllers -->
 
-                        <div class="team-member-header clearfix">
-                            <div class="row">
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <figure>
-                                        <img src="images/team/bryant.jpg" alt="Dawe Bryant" class="img-responsive">
-                                    </figure>
-                                    <div class="md-margin visible-xs visible-sm"></div><!-- space for small devices -->
-                                </div><!-- End .col-md-4-->
-
-                                <div class="col-md-8 col-sm-12 col-xs-12">
-                                    <div class="team-member-header-meta">
-                                        <div class="team-member-name">Courtney Bryant</div><!-- End .team-member-name -->
-                                        <div class="team-member-title">SEO</div><!-- End team-member-title -->
-
-                                        <p>Suspendisse potenti. In non tincidunt mauris. Sed accumsan augue a gravida posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dictum ornare. Maecenas pellentesque nibh ac suscipit sodales. Integer quis mattis nibh. Aliquam arcu velit, blandit sit amet neque vitae, eleifend feugiat lorem. Suspendisse potenti.</p>
-                                        <blockquote><p>Maecenas semper aliquam massa. Praesent pharetra sem vitae nisi eleifend molestie. Aliquam molestie scelerisque ultricies. Suspendisse potenti. Phasellus interdum risus at mi ullamcorper lobortis. In et metus aliquet, suscipit leo.</p></blockquote>
-                                        <p>Suspendisse potenti. In non tincidunt mauris. Sed accumsan augue a gravida posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor dictum ornare. Maecenas pellentesque nibh ac suscipit sodales. Integer quis mattis nibh. Aliquam arcu velit, blandit sit amet. Nam pretium augue eget sem malesuada, ut gravida enim iaculis. Praesent sed nulla sed lectus blandit sodales sit amet nec lectus. </p>
-
-                                        <div class="team-member-extra clearfix">
-                                            <ul class="social-links clearfix pull-left">
-                                                <li class="smaller-social-icons"><a href="#" class="social-icon icon-facebook-sm"></a></li>
-                                                <li class="smaller-social-icons"><a href="#" class="social-icon icon-twitter-sm"></a></li>
-                                                <li class="smaller-social-icons"><a href="#" class="social-icon icon-dribbble-sm"></a></li>
-                                                <li class="smaller-social-icons"><a href="#" class="social-icon icon-email-sm"></a></li>
-                                                </ul>
-                                                <ul class="team-member-contact pull-right">
-                                                <li>courtney_bryant@gmail.com</li>
-                                                <li>+(404) 548-26-78-56</li>
-                                                </ul>
-                                        </div><!-- End .team-member-extra-->
-                                    </div><!-- End .team-member-header-meta -->
-                                </div><!-- End .col-md-8--> 
-                            </div><!-- End .row -->
-                        </div><!-- End .team-member-header -->
-
                         <div class="team-member-content">
                             <div class="row">
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">

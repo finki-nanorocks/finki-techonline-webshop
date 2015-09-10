@@ -81,12 +81,13 @@
                                 <div class="btn-group dropdown-cart">
                                 <button type="button" class="btn btn-custom dropdown-toggle" data-toggle="dropdown">
                                     <span class="cart-menu-icon"></span>
-                                    0 item(s) <span class="drop-price">- $0.00</span>
+                                    <asp:Label ID="lblCartItemCount" runat="server" Text="0"></asp:Label> Item(s) 
+                                    $<asp:Label ID="lblCartPrice" CssClass="drop-price" runat="server" Text="0.00"></asp:Label>
                                 </button>
                                     
                                     <div class="dropdown-menu dropdown-cart-menu pull-right clearfix" role="menu">
                                         <p class="dropdown-cart-description">Recently added item(s).</p>
-                                        <ul class="dropdown-cart-product-list">
+                                        <ul ID="ulCartDropdown" runat="server" class="dropdown-cart-product-list">
                                             <li class="item clearfix">
                                             <a href="#" title="Delete item" class="delete-item"><i class="fa fa-times"></i></a>
                                             <a href="#" title="Edit item" class="edit-item"><i class="fa fa-pencil"></i></a>
@@ -122,8 +123,8 @@
                                         </ul>
                                             
                                         <ul class="dropdown-cart-total">
-                                            <li><span class="dropdown-cart-total-title">Shipping:</span>$7</li>
-                                            <li><span class="dropdown-cart-total-title">Total:</span>$1005<span class="sub-price">.99</span></li>
+                                            <li><span class="dropdown-cart-total-title">Shipping:</span>$<asp:Label ID="lblPriceShipping" runat="server" Text="0.00"></asp:Label></li>
+                                            <li><span class="dropdown-cart-total-title">Total:</span>$<asp:Label ID="lblPriceTotal" CssClass="sub-price" runat="server" Text="0.00"></asp:Label></li>
                                         </ul><!-- .dropdown-cart-total -->
                                         <div class="dropdown-cart-action">
                                             <p><a href="Cart.aspx" class="btn btn-custom-2 btn-block">Cart</a></p>

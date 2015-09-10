@@ -4,7 +4,7 @@
     <div id="category-breadcrumb">
         <div class="container">
 		    <ul class="breadcrumb">
-			    <li><a href="index-2.html">Home</a></li>
+			    <li><a href="home.aspx">Home</a></li>
 			    <li><a href="#">Electronics</a></li>
 			    <li class="active">Mobile</li>
 		    </ul>
