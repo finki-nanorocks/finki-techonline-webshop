@@ -11,7 +11,7 @@ namespace techonline_onlineshop
 {
 
 
-    public partial class WebForm1
+    public partial class home
     {
     }
 }

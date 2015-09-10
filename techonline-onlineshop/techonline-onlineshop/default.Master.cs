@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace techonline_onlineshop
 {
-    public partial class terms : System.Web.UI.Page
+    public partial class _default : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
