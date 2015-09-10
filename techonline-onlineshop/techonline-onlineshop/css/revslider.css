@@ -1,0 +1,455 @@
+/*-----------------------------------------------------------------------------
+Revolution Slider 4.1 Captions - Custom Styled for Venedor Template
+Screen Stylesheet
+
+version:   	1.4.5
+date:      	27/11/13
+author:		themepunch
+email:     	info@themepunch.com
+website:   	http://www.themepunch.com
+-----------------------------------------------------------------------------*/
+
+#slider-rev-container {
+	width:100%;
+	position:relative;
+	padding:0;
+	overflow:hidden;
+	background:#f1f6f7;
+	border-bottom:1px solid #e4e2e2;
+}
+ 
+#slider-rev{
+	width:100%;
+	position:relative;
+}
+
+.tp-hide-revslider,.tp-caption.tp-hidden-caption	{	
+	visibility:hidden !important; 
+	display:none !important;
+}
+
+.tp-caption { z-index:1;}
+
+.tp-caption.rev-title {
+	position:absolute;
+	color:#fff;
+	font:400 45px/1 "PT Sans", sans-serif;
+	margin:0px;
+	border-width:0px;
+	border-style:none;
+	white-space:nowrap;
+	text-transform:uppercase;
+	background:#14bfcc;
+	padding:5px 20px;
+}
+
+.tp-caption.rev-subtitle {
+	position:absolute;
+	color:#fff;
+	font:400 40px/1 "Gudea", Arial, sans-serif;
+	margin:0px;
+	border-width:0px;
+	border-style:none;
+	white-space:nowrap;
+	background:#444b4c;
+	padding:7.5px 20px;
+}
+
+.tp-caption.rev-text {
+	position:absolute;
+	color:#62605a;
+	font-weight:400;
+	font-size:17px;
+	line-height:1.5;
+	margin:0px;
+	border-width:0px;
+	border-style:none;
+	max-width:450px;
+}
+
+.tp-caption .btn.btn-custom-2 {
+	font-weight:700;
+	font-size:15px;
+	padding:10px 25px;
+}
+
+@media (max-width: 768px) { 
+	.tp-caption .btn.btn-custom-2 {
+		font-weight:700;
+		font-size:10px;
+		padding:4px 12px;
+	}
+}
+
+/**********************************************
+	-	FULLSCREEN AND FULLWIDHT CONTAINERS	-
+**********************************************/
+
+.fullscreen-container {
+		width:100%;
+		position:relative;
+		padding:0;
+}
+
+
+
+.fullwidthbanner-container{
+	width:100%;
+	position:relative;
+	padding:0;
+	overflow:hidden;
+}
+
+.fullwidthbanner-container .fullwidthbanner{
+	width:100%;
+	position:relative;
+}
+
+
+
+/************************************************
+	  - SOME CAPTION MODIFICATION AT START  -
+*************************************************/
+.tp-simpleresponsive .caption,
+.tp-simpleresponsive .tp-caption {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";		
+	opacity: 0;
+	position:absolute;
+	visibility: hidden;
+	-webkit-font-smoothing: antialiased !important;
+}
+
+
+.tp-simpleresponsive img	{	max-width:none;}
+
+
+
+/******************************
+	-	IE8 HACKS	-
+*******************************/
+.noFilterClass {
+	filter:none !important;
+}
+
+/********************************
+	-	FULLSCREEN VIDEO	-
+*********************************/
+.caption.fullscreenvideo {	left:0px; top:0px; position:absolute;width:100%;height:100%;}
+.caption.fullscreenvideo iframe,
+.caption.fullscreenvideo video	{ width:100% !important; height:100% !important; display: none}
+
+.tp-caption.fullscreenvideo {	left:0px; top:0px; position:absolute;width:100%;height:100%;}
+.tp-caption.fullscreenvideo iframe,
+.tp-caption.fullscreenvideo iframe video	{ width:100% !important; height:100% !important; display: none;}
+
+
+.fullscreenvideo .vjs-loading-spinner { visibility:none;display:none !important; width:0px;height:0px;}
+.fullscreenvideo .vjs-control-bar.vjs-fade-out,
+.fullscreenvideo .vjs-control-bar.vjs-fade-in,
+.fullscreenvideo .vjs-control-bar.vjs-fade-out.vjs-lock-showing,
+.fullscreenvideo .vjs-control-bar.vjs-fade-in.vjs-lock-showing		{	visibility: hidden !important; opacity: 0 !important;display:none !important;width:0px;height:0px;overflow: hidden;}
+
+.fullcoveredvideo.video-js,
+.fullcoveredvideo video				{	background: transparent !important;}
+
+.fullcoveredvideo .vjs-poster		{	background-position: center center;background-size: cover;width:100%;height:100%;top:0px;left:0px;}
+
+
+/************************
+	-	NAVIGATION	-
+*************************/
+
+/** BULLETS **/
+
+.tpclear{	
+	clear:both;
+}
+
+
+.tp-bullets	{	
+	z-index:700;
+	position:absolute;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;-webkit-transform: translateZ(5px);
+}
+
+.tp-bullets.hidebullets	{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+
+/*************************************
+	-	TP ARROWS 	-
+**************************************/
+.tparrows {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	-moz-opacity: 1;
+	-khtml-opacity: 1;
+	opacity: 1;
+	-webkit-transition: opacity 0.2s ease-out; -moz-transition: opacity 0.2s ease-out; -o-transition: opacity 0.2s ease-out; -ms-transition: opacity 0.2s ease-out;			
+	-webkit-transform: translateZ(5px);
+}
+
+.tparrows.hidearrows {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+.tparrows {
+    background-color: #fafafa !important;
+	background-image: url('../images/sprites/homeslidernav.png') !important;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width:70px !important;
+	height:45px !important;
+	z-index: 700;
+	margin-top: -27.5px !important;
+	border:1px solid #e0e0e0;
+	-webkit-transition:background-color 0.6s ease-in-out, border 0.6s ease-in-out;
+	-moz-transition:background-color 0.6s ease-in-out, border 0.6s ease-in-out;
+	-o-transition:background-color 0.6s ease-in-out, border 0.6s ease-in-out;
+	-ms-transition:background-color 0.6s ease-in-out, border 0.6s ease-in-out;
+	transition:background-color 0.6s ease-in-out, border 0.6s ease-in-out;
+	-webkit-box-shadow:inset 0 1px 1px #fff, 0 1px 1px rgba(0,0,0, 0.1);
+	box-shadow:inset 0 1px 1px #fff, 0 1px 1px rgba(0,0,0, 0.1);
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.tparrows.tp-leftarrow {
+	left:0;
+	border-left:transparent;
+	background-position: 0 0;
+	border-radius:0 3px 3px 0;
+}
+
+.tparrows.tp-rightarrow {
+	right:0;
+	border-right:transparent;
+	background-position: -68px 0;
+	border-radius:3px 0 0 3px;
+}
+
+.tparrows:hover {
+    background-color: #14bfcc !important;
+    border-color:#14bfcc;
+    box-shadow:none;
+    -webkit-box-shadow:none;
+}
+
+.tparrows.tp-leftarrow:hover {
+	background-position: 0 -43px;
+}
+
+.tparrows.tp-rightarrow:hover {
+	background-position: -68px -43px;
+}
+
+@media (max-width: 767px) {
+
+	.tparrows{
+		width:50px !important;
+		height:36px !important;
+		margin-top: -18px !important;
+	}
+
+	.tparrows.tp-leftarrow {
+		background-position: -136px 0;
+	}
+
+	.tparrows.tp-rightarrow {
+		background-position: -184px 0;
+
+	}
+
+	.tparrows.tp-leftarrow:hover {
+		background-position: -136px -34px;
+	}
+
+	.tparrows.tp-rightarrow:hover {
+		background-position: -184px -34px;
+	}
+}
+
+.tp-bullets.simplebullets .bullet {
+	cursor: pointer;
+	position: relative !important;
+	background: #444b4c !important;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	width: 79px !important;
+	height: 4px !important;
+	display: inline-block;
+	margin:0 2px !important;
+	-webkit-transition: background 0.2s;
+	-moz-transition: background 0.2s;
+	-o-transition: background 0.2s;
+	-ms-transition: background 0.2s;
+	transition: background 0.2s;
+	float:none !important;
+	user-select:none;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	-o-user-select:none;
+}
+.tp-bullets.simplebullets .bullet.last {
+	margin-right: 0px
+}
+.tp-bullets.simplebullets .bullet:hover,
+.tp-bullets.simplebullets .bullet.selected {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	background: #14bfcc !important;
+	width: 79px !important;
+	height: 4px !important;
+}
+
+@media (max-width: 768px) { 
+	.tp-bullets.simplebullets {
+		display:none !important;
+	}
+}
+
+/***************************************
+	-	RESPONSIVE SETTINGS 	-
+****************************************/
+
+
+
+
+    @media only screen and (min-width: 0px) and (max-width: 479px) {
+				.responsive .tp-bullets	{	display:none}
+				.responsive .tparrows	{	display:none;}
+	}
+
+
+/******************************
+	-	HTML5 VIDEO SETTINGS	-
+********************************/
+
+.vjs-tech { margin-top:1px}
+
+.tp-caption .vjs-default-skin .vjs-big-play-button	{	left: 50%;
+top: 50%;
+margin-left: -20px;
+margin-top: -20px;
+width: 40px;
+height: 40px;
+border-radius: 5px;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border: none;
+box-shadow: none;
+text-shadow: none;
+line-height: 30px;
+vertical-align: top;
+padding: 0px;
+}
+
+.tp-caption .vjs-default-skin .vjs-big-play-button:before {
+ position:absolute;
+ top:0px; left:0px;
+ line-height:40px;
+ text-shadow: none !important;
+ color:#fff;
+ font-size:18px;
+
+}
+
+.tp-caption  .vjs-default-skin:hover .vjs-big-play-button, .vjs-default-skin .vjs-big-play-button:focus {
+
+	box-shadow:none;
+	-webkit-box-shadow:none;
+
+}
+
+
+
+/*********************************************
+
+	-	BASIC SETTINGS FOR THE BANNER	-
+
+***********************************************/
+
+ .tp-simpleresponsive img {
+		-moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+}
+
+
+
+.tp-simpleresponsive a{	text-decoration:none;}
+
+.tp-simpleresponsive ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+.tp-simpleresponsive >ul >li{
+	list-stye:none;
+	position:absolute;
+	visibility:hidden;
+}
+
+.tp-loader 	{	
+		background:url(../images/loader.gif) no-repeat 10px 10px;
+		background-color:#fff;  
+		margin:-22px -22px; 
+		top:50%; 
+		left:50%; 
+		z-index:10000; 
+		position:absolute;
+		width:44px;
+		height:44px;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+}
+.tp-3d	{	
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform-origin: 50% 50%;
+}
+
+
+
+@media (max-width: 767px) { 
+	.tp-caption .btn {
+		padding:4px 9px;
+		font-size:9px;
+	}
+
+}
+
+@media (max-width: 480px) {
+	.tp-caption .btn {
+		padding:2px 5px;
+		font-size:7px;
+	}
+}
+
+.tp-caption img {
+background: transparent;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF)";
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+zoom: 1;
+}
+
