@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace techonline_onlineshop.backend
+namespace TechonlineAPI
 {
     public class CartItem
     {
+        public int id { get; set; }
         public int quantity { get; set; }
         public Product product { get; set; }
 
         public CartItem(Product p, int quantity = 1)
         {
             this.quantity = quantity;
-            this.p = p;
+            this.product = p;
         }
     }
 }
