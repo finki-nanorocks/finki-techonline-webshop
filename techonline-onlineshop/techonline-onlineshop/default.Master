@@ -58,7 +58,7 @@
  	
     						<div class="header-text-container pull-right">
     							<p class="header-text">Welcome to Techonline!</p>
-        						<p class="header-link"><a href="#">login</a>&nbsp;or&nbsp;<a href="#">create an account</a></p>
+        						<p class="header-link"><a href="login.aspx">login</a>&nbsp;or&nbsp;<a href="#">create an account</a></p>
     						</div><!-- End .pull-right -->
     					</div><!-- End .header-top-right -->
     				</div><!-- End .col-md-12 -->

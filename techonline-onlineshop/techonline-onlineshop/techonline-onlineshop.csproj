@@ -74,6 +74,11 @@
     <Content Include="css\style.css" />
     <Content Include="fonts\fontawesome-webfontba72.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forms_all\formoid1\formoid-solid-dark.css" />
+    <Content Include="forms_all\formoid1\formoid-solid-dark.js" />
+    <Content Include="forms_all\formoid1\formoid.svg" />
+    <Content Include="forms_all\formoid1\icons.svg" />
+    <Content Include="forms_all\formoid1\jquery.min.js" />
     <Content Include="Global.asax" />
     <Content Include="home.aspx" />
     <Content Include="images\404-comment.png" />
@@ -148,6 +153,7 @@
     <Content Include="js\owl.carousel.min.js" />
     <Content Include="js\retina-1.1.0.min.js" />
     <Content Include="js\smoothscroll.js" />
+    <Content Include="login.aspx" />
     <Content Include="MyAccount.aspx" />
     <Content Include="ShowProduct.aspx" />
     <Content Include="Shop.aspx" />
@@ -215,6 +221,13 @@
     <Compile Include="home.aspx.designer.cs">
       <DependentUpon>home.aspx</DependentUpon>
     </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MyAccount.aspx.cs">
       <DependentUpon>MyAccount.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -255,6 +268,19 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="forms_all\formoid1\.htaccess" />
+    <Content Include="forms_all\formoid1\form.formoid" />
+    <Content Include="forms_all\formoid1\form.php" />
+    <Content Include="forms_all\formoid1\formoid.eot" />
+    <Content Include="forms_all\formoid1\formoid.ttf" />
+    <Content Include="forms_all\formoid1\formoid.woff" />
+    <Content Include="forms_all\formoid1\handler.php" />
+    <Content Include="forms_all\formoid1\helpers.php" />
+    <Content Include="forms_all\formoid1\icons.eot" />
+    <Content Include="forms_all\formoid1\icons.ttf" />
+    <Content Include="forms_all\formoid1\icons.woff" />
+    <Content Include="forms_all\formoid1\JSON.php" />
+    <Content Include="forms_all\formoid1\recaptchalib.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

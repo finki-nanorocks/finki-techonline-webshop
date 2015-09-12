@@ -7,7 +7,7 @@ namespace TechonlineAPI
 {
     public class Order
     {
-        public ShoppingCart oredredCart { get; }
+        public ShoppingCart oredredCart { get; set; }
 
         public Order(ShoppingCart orderedCart)
         {

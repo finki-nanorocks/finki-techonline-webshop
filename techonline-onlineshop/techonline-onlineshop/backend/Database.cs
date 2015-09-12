@@ -87,5 +87,36 @@ namespace TechonlineAPI
         {
 
         }
+        public bool checkUser(string email, string pass)
+        {
+            int tmp = 0;
+            SqlCommand cmd = new SqlCommand("SELECT [name], [password], [email], FROM [User_info] WHERE ([password] = @password) AND ([email] = @email)", this.connection);
+            this.connection.Open();
+            try
+            {
+                cmd.Parameters.AddWithValue("@password", pass); // vo slucaj da ne gi najde spored pass i email nema da vrati niso i ke padne , pa zatoa ke vrati false
+                cmd.Parameters.AddWithValue("@email", email);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    if (read["email"] == email & read["password"] == pass)
+                    {
+                        tmp++; // ako postoi korisnik ova moze i da si implementira ako najde i korisnici povekje isti so pass i email :P
+                    }
+                }
+                if (tmp != 0)
+                {
+                    return true; // postoi, zacuvaj gi vo sesija imeto,pass,email treba da se implementira
+                }
+                this.connection.Close();
+                return false;
+            }
+            catch (Exception err) { this.connection.Close(); }
+            return false;
+        }
+        public void addUser(User u)
+        {
+
+        }
     }
 }
