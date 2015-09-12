@@ -11,7 +11,7 @@ namespace techonline_onlineshop
 {
 
 
-    public partial class Product
+    public partial class ShowProduct
     {
     }
 }
