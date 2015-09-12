@@ -31,7 +31,7 @@ namespace TechonlineAPI
             {
                 if(item.quantity > 0)
                 {
-                    total += ((item.product.Price + item.product.PriceShipping) * item.quantity);
+                    total += ((item.product.Price + 0) * item.quantity);
                 }
                
             }
@@ -45,7 +45,7 @@ namespace TechonlineAPI
             {
                 if (item.quantity > 0)
                 {
-                    total += item.product.PriceShipping * item.quantity;
+                    total += 1 * item.quantity;
                 }
 
             }

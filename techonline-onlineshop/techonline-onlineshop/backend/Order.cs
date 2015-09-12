@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace techonline_onlineshop.backend
+namespace TechonlineAPI
 {
     public class Order
     {
-        public int id { get; set; }
-        public List<Product> orderedProducts { get; set; }
+        public ShoppingCart oredredCart { get; }
 
-        public Order(List<Product> products)
+        public Order(ShoppingCart orderedCart)
         {
-            this.orderedProducts = products;
+            this.oredredCart = orderedCart;
         }
+          
     }
 }

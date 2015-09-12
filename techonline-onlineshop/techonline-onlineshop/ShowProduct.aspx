@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="Product.aspx.cs" Inherits="techonline_onlineshop.Product" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="ShowProduct.aspx.cs" Inherits="techonline_onlineshop.ShowProduct" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<section id="content">
+    <section id="content">
     <div id="breadcrumb-container">
         <div class="container">
 			<ul class="breadcrumb">
