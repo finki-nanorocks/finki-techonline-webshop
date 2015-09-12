@@ -213,31 +213,31 @@
                             <div class="row">
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">
                                     <figure>
-                                    <img src="images/team/courtney.jpg" alt="Courtney Bryant">
+                                    <img src="images/team/darko.jpg" alt="Courtney Bryant">
                                     </figure>
-                                    <div class="team-member-name">Courtney Bryant</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">SysAdmin</div><!-- End .team-member-title -->
+                                    <div class="team-member-name">Darko Gjorjijoski</div><!-- End .team-member-name -->
+                                    <div class="team-member-title">Lead Developer</div><!-- End .team-member-title -->
                                 </div><!-- End .col-md-3.team-member -->
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">
                                     <figure>
-                                    <img src="images/team/walter.jpg" alt="Walter Allter">
+                                    <img src="images/team/damsi.jpg" alt="Walter Allter">
                                     </figure>
-                                    <div class="team-member-name">Walter Allter</div><!-- End .team-member-name -->
+                                    <div class="team-member-name">Damjan Miloshevski</div><!-- End .team-member-name -->
                                     <div class="team-member-title">Chief Executive Officer</div><!-- End .team-member-title -->
                                 </div><!-- End .col-md-3.team-member -->
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">
                                     <figure>
-                                    <img src="images/team/arron.jpg" alt="Arron Rivera">
+                                    <img src="images/team/nankov.jpg" alt="Arron Rivera">
                                     </figure>
-                                    <div class="team-member-name">Arron Rivera</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">Sales Manager</div><!-- End .team-member-title -->
+                                    <div class="team-member-name">Andrej Nankov</div><!-- End .team-member-name -->
+                                    <div class="team-member-title">Project Manager</div><!-- End .team-member-title -->
                                 </div><!-- End .col-md-3.team-member -->
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">
                                     <figure>
                                     <img src="images/team/evan.jpg" alt="Evan Brooks">
                                     </figure>
                                     <div class="team-member-name">Evan Brooks</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">Project Manager</div><!-- End .team-member-title -->
+                                    <div class="team-member-title">Sales Manager</div><!-- End .team-member-title -->
                                 </div><!-- End .col-md-3.team-member -->
 
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">

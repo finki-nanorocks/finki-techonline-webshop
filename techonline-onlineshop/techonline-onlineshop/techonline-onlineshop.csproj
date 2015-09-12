@@ -117,6 +117,9 @@
     <Content Include="images\sprites\responsive-menu-icon.png" />
     <Content Include="images\sprites\sprite%402x.png" />
     <Content Include="images\sprites\sprite.png" />
+    <Content Include="images\team\damsi.jpg" />
+    <Content Include="images\team\darko.jpg" />
+    <Content Include="images\team\nankov.jpg" />
     <Content Include="images\testimonial-arrow.png" />
     <Content Include="images\testimonialsbg.jpg" />
     <Content Include="js\bootstrap.min.js" />
