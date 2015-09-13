@@ -89,6 +89,8 @@
     <Content Include="images\banner2.jpg" />
     <Content Include="images\banner3.jpg" />
     <Content Include="images\category-shadow.png" />
+    <Content Include="images\cover-edited.png" />
+    <Content Include="images\cover.png" />
     <Content Include="images\england-flag.png" />
     <Content Include="images\france-flag.png" />
     <Content Include="images\germany-flag.png" />
@@ -125,6 +127,7 @@
     <Content Include="images\sprites\sprite.png" />
     <Content Include="images\team\damsi.jpg" />
     <Content Include="images\team\darko.jpg" />
+    <Content Include="images\team\lile.jpg" />
     <Content Include="images\team\nankov.jpg" />
     <Content Include="images\testimonial-arrow.png" />
     <Content Include="images\testimonialsbg.jpg" />
