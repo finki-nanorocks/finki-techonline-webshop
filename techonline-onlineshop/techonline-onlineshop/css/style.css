@@ -5376,7 +5376,7 @@ html[xmlns] .slides {display: block;}
 #page-header {
 	background-size: cover;
 	-webkit-background-size: cover;
-	background-image: url('../images/cover-edited.png');
+	background-image: url('../images/cover.png');
 	background-repeat: no-repeat;
 	background-position:top center;
 	text-align:center;
