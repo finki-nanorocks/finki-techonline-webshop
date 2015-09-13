@@ -1329,13 +1329,13 @@ parent's font-size:0
 
 .brand-slider a {
 	display:inline-block;
+    height:20%;
 
 }
 
 .brand-slider img {
 	display:inline-block;
 	max-width:100%;
-	height:auto;
 }
 
 

@@ -88,6 +88,14 @@
     <Content Include="images\banner1.jpg" />
     <Content Include="images\banner2.jpg" />
     <Content Include="images\banner3.jpg" />
+    <Content Include="images\brands\acer.png" />
+    <Content Include="images\brands\apple.png" />
+    <Content Include="images\brands\asus.png" />
+    <Content Include="images\brands\finki.jpg" />
+    <Content Include="images\brands\finki.png" />
+    <Content Include="images\brands\lg.png" />
+    <Content Include="images\brands\samsung.png" />
+    <Content Include="images\brands\sony.png" />
     <Content Include="images\category-shadow.png" />
     <Content Include="images\cover-edited.png" />
     <Content Include="images\cover.png" />
