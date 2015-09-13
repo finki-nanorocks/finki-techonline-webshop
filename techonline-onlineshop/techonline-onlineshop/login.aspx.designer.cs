@@ -31,13 +31,13 @@ namespace techonline_onlineshop {
         protected global::System.Web.UI.WebControls.TextBox Loginpassword;
         
         /// <summary>
-        /// Button1 control.
+        /// LoginUp control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button LoginUp;
         
         /// <summary>
         /// LoginSing control.

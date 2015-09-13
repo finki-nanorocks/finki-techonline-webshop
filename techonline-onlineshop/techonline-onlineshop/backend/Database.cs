@@ -10,6 +10,7 @@ namespace TechonlineAPI
     public class Database
     {
        // private readonly string connstring = "Data Source=DARKO-LAPTOP\\SQLEXPRESS;Initial Catalog=db_techonlineGNML;Integrated Security=True";
+        // private readonly string connstring = "Data Source=ANDREJNANKOV;Initial Catalog=db_techonlineGNML;Integrated Security=True";
         private string connectionString
         {
             get; set;
@@ -87,32 +88,34 @@ namespace TechonlineAPI
         {
 
         }
-        public bool checkUser(string email, string pass)
+        public string checkUser(string email, string pass)
         {
             int tmp = 0;
+            string name = ""; // ako ne postoi korisnik vrati ""
             SqlCommand cmd = new SqlCommand("SELECT [name], [password], [email], FROM [User_info] WHERE ([password] = @password) AND ([email] = @email)", this.connection);
-            this.connection.Open();
             try
             {
+                this.connection.Open();
                 cmd.Parameters.AddWithValue("@password", pass); // vo slucaj da ne gi najde spored pass i email nema da vrati niso i ke padne , pa zatoa ke vrati false
                 cmd.Parameters.AddWithValue("@email", email);
                 SqlDataReader read = cmd.ExecuteReader();
                 while (read.Read())
                 {
-                    if (read["email"] == email & read["password"] == pass)
+                    if (read["email"].Equals(email) && read["password"].Equals(pass))
                     {
                         tmp++; // ako postoi korisnik ova moze i da si implementira ako najde i korisnici povekje isti so pass i email :P
+                        name = read["name"].ToString();
                     }
                 }
                 if (tmp != 0)
                 {
-                    return true; // postoi, zacuvaj gi vo sesija imeto,pass,email treba da se implementira
+                    return name; // postoi, zacuvaj gi vo sesija imeto,pass,email treba da se implementira
                 }
                 this.connection.Close();
-                return false;
+                return "";
             }
             catch (Exception err) { this.connection.Close(); }
-            return false;
+            return "";
         }
         public void addUser(User u)
         {
