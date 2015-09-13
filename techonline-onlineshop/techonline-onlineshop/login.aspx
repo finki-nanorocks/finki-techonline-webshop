@@ -27,7 +27,7 @@
 </div>
 <div class="submit">
     <asp:Button ID="Button1" type="submit" Text="SingUp" runat="server"/>
-    <asp:Button ID="LoginSing" type="submit" Text="SingIn" runat="server"/>
+    <asp:Button ID="LoginSing" type="submit" Text="SingIn" runat="server" OnClick="LoginSing_Click"/>
 </div>
     </form>
 </body>
