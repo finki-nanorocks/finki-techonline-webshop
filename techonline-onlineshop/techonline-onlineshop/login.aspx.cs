@@ -15,13 +15,25 @@ namespace techonline_onlineshop
         }
         protected void LoginSing_Click(object sender, EventArgs e)
         {
-            string email = LoginSing.Text;
-            string pass = Loginpassword.Text;
-            TechonlineAPI.Database d = new TechonlineAPI.Database();
-            string tmp = d.checkUser(email, pass);
-            if(tmp != "")
-            Response.Redirect("~/home.aspx");
-            else { Response.Redirect("~/shop.aspx"); }
+            string email = "", pass = "";
+            email = LoginSing.Text;
+            pass = Loginpassword.Text;
+
+            if ((email == "" && pass == "") || (email == null && pass == null))
+            {
+                LoginSing.Attributes.Add("onClick", "javascript:alert('Message Here');");
+                return;
+            }
+            else
+            {
+                TechonlineAPI.Database d = new TechonlineAPI.Database();
+                string tmp = d.checkUser(email, pass);
+                if (tmp != "")
+                    Response.Redirect("~/home.aspx");
+                else {// Response.Redirect("~/shop.aspx"); 
+                }
+
+            }
             
         }
     }

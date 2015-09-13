@@ -26,13 +26,8 @@
 	<div class="element-checkbox"><label class="title"></label>		<div class="column column1"><label><input type="checkbox" name="checkbox[]" value="remember me" /><span>remember me</span></label></div><span class="clearfix"></span>
 </div>
 <div class="submit">
-<<<<<<< HEAD
-    <asp:Button ID="Button1" type="submit" Text="SingUp" runat="server"/>
+    <asp:Button ID="LoginUp" type="submit" Text="SingUp" runat="server"/>
     <asp:Button ID="LoginSing" type="submit" Text="SingIn" runat="server" OnClick="LoginSing_Click"/>
-=======
-    <asp:Button ID="Button1" type="submit" Text="Sign up" runat="server"/>
-    <asp:Button ID="LoginSing" type="submit" Text="Sign in" runat="server"/>
->>>>>>> be452107525ac57752c613d15c43b7d72ada534c
 </div>
     </form>
 </body>

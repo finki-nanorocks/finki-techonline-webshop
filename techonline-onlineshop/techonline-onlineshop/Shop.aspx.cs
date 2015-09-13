@@ -18,7 +18,7 @@ namespace techonline_onlineshop
             SqlConnection conn = new SqlConnection(connectionString);
             
             SqlCommand cmd = new SqlCommand("SELECT * FROM products_info", conn);
-
+            
             conn.Open();
 
             SqlDataReader r = cmd.ExecuteReader();

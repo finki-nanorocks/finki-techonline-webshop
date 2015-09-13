@@ -10,6 +10,7 @@ namespace TechonlineAPI
     public class Database
     {
        // private readonly string connstring = "Data Source=DARKO-LAPTOP\\SQLEXPRESS;Initial Catalog=db_techonlineGNML;Integrated Security=True";
+        // private readonly string connstring = "Data Source=ANDREJNANKOV;Initial Catalog=db_techonlineGNML;Integrated Security=True";
         private string connectionString
         {
             get; set;
@@ -100,7 +101,7 @@ namespace TechonlineAPI
                 SqlDataReader read = cmd.ExecuteReader();
                 while (read.Read())
                 {
-                    if (read["email"] == email & read["password"] == pass)
+                    if (read["email"].Equals(email) && read["password"].Equals(pass))
                     {
                         tmp++; // ako postoi korisnik ova moze i da si implementira ako najde i korisnici povekje isti so pass i email :P
                         name = read["name"].ToString();
