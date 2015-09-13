@@ -215,63 +215,30 @@
                                     <figure>
                                     <img src="images/team/darko.jpg" alt="Courtney Bryant">
                                     </figure>
-                                    <div class="team-member-name">Darko Gjorjijoski</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">Lead Developer</div><!-- End .team-member-title -->
+                                    <div class="team-member-name">Darko Gjorgjijoski</div><!-- End .team-member-name -->
+                                    <div class="team-member-title">Lead Front-end&nbsp;&amp;&nbsp;Back-end developer</div><!-- End .team-member-title -->
                                 </div><!-- End .col-md-3.team-member -->
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">
                                     <figure>
                                     <img src="images/team/damsi.jpg" alt="Walter Allter">
                                     </figure>
                                     <div class="team-member-name">Damjan Miloshevski</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">Chief Executive Officer</div><!-- End .team-member-title -->
+                                    <div class="team-member-title">Front-end developer&nbsp;&amp;&nbsp;Project manager</div><!-- End .team-member-title -->
                                 </div><!-- End .col-md-3.team-member -->
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">
                                     <figure>
                                     <img src="images/team/nankov.jpg" alt="Arron Rivera">
                                     </figure>
                                     <div class="team-member-name">Andrej Nankov</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">Project Manager</div><!-- End .team-member-title -->
+                                    <div class="team-member-title">Front-end&nbsp;&amp;&nbsp;Back-end developer</div><!-- End .team-member-title -->
                                 </div><!-- End .col-md-3.team-member -->
                                 <div class="col-md-3 col-sm-3 col-xs-6 team-member">
                                     <figure>
-                                    <img src="images/team/evan.jpg" alt="Evan Brooks">
+                                    <img src="images/team/lile.jpg" alt="Evan Brooks">
                                     </figure>
-                                    <div class="team-member-name">Evan Brooks</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">Sales Manager</div><!-- End .team-member-title -->
+                                    <div class="team-member-name">Liljana Dimovska</div><!-- End .team-member-name -->
+                                    <div class="team-member-title">Front-end developer&nbsp;&amp;&nbsp;Project advisor</div><!-- End .team-member-title -->
                                 </div><!-- End .col-md-3.team-member -->
-
-                                <div class="col-md-3 col-sm-3 col-xs-6 team-member">
-                                    <figure>
-                                    <img src="images/team/susan.jpg" alt="Susan Brooks">
-                                    </figure>
-                                    <div class="team-member-name">Susan Brooks</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">Accounts Manager</div><!-- End .team-member-title -->
-                                </div><!-- End .col-md-3.team-member -->
-
-                                <div class="col-md-3 col-sm-3 col-xs-6 team-member">
-                                    <figure>
-                                    <img src="images/team/jake.jpg" alt="Jake Bryant">
-                                    </figure>
-                                    <div class="team-member-name">Jake Bryant</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">Office Manager</div><!-- End .team-member-title -->
-                                </div><!-- End .col-md-3.team-member -->
-
-                                <div class="col-md-3 col-sm-3 col-xs-6 team-member">
-                                    <figure>
-                                    <img src="images/team/jane.jpg" alt="Jane Bryant">
-                                    </figure>
-                                    <div class="team-member-name">Jane Bryant</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">PHP Developer</div><!-- End .team-member-title -->
-                                </div><!-- End .col-md-3.team-member -->
-
-                                <div class="col-md-3 col-sm-3 col-xs-6 team-member">
-                                    <figure>
-                                    <img src="images/team/diana.jpg" alt="Diana Rivera">
-                                    </figure>
-                                    <div class="team-member-name">Diana Rivera</div><!-- End .team-member-name -->
-                                    <div class="team-member-title">JavaScript Developer</div><!-- End .team-member-title -->
-                                </div><!-- End .col-md-3.team-member -->
-
                             </div><!-- End .row -->
                         </div><!-- End .team-member-content --> 
                 </div><!-- End #team-members-slider-contaiener -->
@@ -315,3 +282,4 @@
 	</div><!-- End .container -->
 </section>
 </asp:Content>
+   

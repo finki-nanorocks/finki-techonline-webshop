@@ -4616,6 +4616,7 @@ noUi-target,
 #map {
 	height:350px;
 	margin-bottom:50px;
+    margin-left: 300px;
 }
 
 #map img {
@@ -5375,7 +5376,7 @@ html[xmlns] .slides {display: block;}
 #page-header {
 	background-size: cover;
 	-webkit-background-size: cover;
-	background-image: url('../images/aboutus-hedaerbg.jpg');
+	background-image: url('../images/cover-edited.png');
 	background-repeat: no-repeat;
 	background-position:top center;
 	text-align:center;
@@ -6089,4 +6090,22 @@ html[xmlns] .slides {display: block;}
 }
 #option-panel #panel-font .panel {
 	margin-bottom:10px;
+}
+.contact-heading {
+    text-align:center;
+    font-size: 28px;
+    font-weight:bold;
+}
+hr {
+   width: 70%; 
+}
+.link-contact {
+    text-align:center;
+    font-size: 20px;
+}
+.location-text {
+   text-align:center;
+   font-size: 28px;
+   font-weight:bold;
+
 }
