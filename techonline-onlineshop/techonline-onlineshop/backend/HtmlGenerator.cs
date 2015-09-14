@@ -67,7 +67,7 @@ namespace TechonlineAPI
             const int columns = 4;
             string html = "<div class='row'>";
             int count = 1;
-            foreach(Product p in allProducts)
+            /*foreach(Product p in allProducts)
             {
                 html += "<div class='col-md-4 col-sm-6 col-xs-12'>";
                 html += "<div class='item'>";
@@ -103,6 +103,11 @@ namespace TechonlineAPI
                     html += "</div><div class='row'>";
                     count = 0;
                 }
+            }*/
+
+            foreach(Product p in allProducts)
+            {
+                html += p.Brand;
             }
 
             return html;

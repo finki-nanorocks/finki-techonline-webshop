@@ -1,4 +1,4 @@
-﻿p<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="techonline_onlineshop._default" %>
+﻿dp<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="techonline_onlineshop._default" %>
 
 <!DOCTYPE html>
 <!--[if IE 8]> <html class="ie8"> <![endif]-->
