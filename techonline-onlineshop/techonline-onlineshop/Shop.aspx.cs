@@ -13,6 +13,7 @@ namespace techonline_onlineshop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+<<<<<<< HEAD
 
            string connectionString = ConfigurationManager.ConnectionStrings["TechonlineConnectionStr"].ConnectionString;
             SqlConnection conn = new SqlConnection(connectionString);
@@ -48,10 +49,34 @@ namespace techonline_onlineshop
                 r.Close();
                 divProductsContainer.InnerHtml = HtmlGenerator.NEWProductsPageItems(allProducts);
             }catch(Exception err){}
+=======
+            String str = ConfigurationManager.ConnectionStrings["TechonlineConnectionStr"].ConnectionString;
+            SqlConnection connection = new SqlConnection(str);
+            SqlCommand cmd = new SqlCommand("SELECT * FROM products_info", connection);
+            connection.Open();
+            SqlDataReader r = cmd.ExecuteReader();
+            List<Product> allProducts = new List<Product>();
 
-            /*Database db = (Database)Application["DB"];
-            List<Product> allProducts = db.GetAllProducts();
-            divProductsContainer.InnerHtml = HtmlGenerator.NEWProductsPageItems(allProducts);*/
+            while (r.Read())
+            {
+                allProducts.Add(new Product(
+                    Convert.ToInt32(r.GetString(0)), //ID
+                    Convert.ToString(r.GetString(1)), //Type
+                    Convert.ToString(r.GetString(2)), // Brand
+                    Convert.ToString(r.GetString(3)), // Model
+                    Convert.ToString(r.GetString(4)), // CPU
+                    Convert.ToString(r.GetString(5)), // RAM
+                    Convert.ToString(r.GetString(6)), // HDD
+                    Convert.ToString(r.GetString(7)), // HDD
+                    Convert.ToString(r.GetString(8)), //OS
+                    Convert.ToString(r.GetString(9)), //more_info
+                    Convert.ToDouble(r.GetDouble(10)) //Price
+                 ));
+            }
+
+>>>>>>> aec8a5a68751614e1acb55c91cdd328abdc3a774
+
+            divProductsContainer.InnerHtml = HtmlGenerator.NEWProductsPageItems(allProducts);
         }
     }
 }
