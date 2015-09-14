@@ -10,42 +10,51 @@
 namespace techonline_onlineshop {
     
     
-    public partial class Shop {
+    public partial class registration {
         
         /// <summary>
-        /// form1 control.
+        /// LoginEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox LoginEmail;
         
         /// <summary>
-        /// GridView1 control.
+        /// Loginpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.TextBox Loginpassword;
         
         /// <summary>
-        /// SqlDataSource1 control.
+        /// emailid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.TextBox emailid;
         
         /// <summary>
-        /// divProductsContainer control.
+        /// passId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProductsContainer;
+        protected global::System.Web.UI.WebControls.TextBox passId;
+        
+        /// <summary>
+        /// Registerid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Registerid;
     }
 }

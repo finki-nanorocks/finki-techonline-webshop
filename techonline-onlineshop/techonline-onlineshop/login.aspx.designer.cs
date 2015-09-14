@@ -31,21 +31,21 @@ namespace techonline_onlineshop {
         protected global::System.Web.UI.WebControls.TextBox Loginpassword;
         
         /// <summary>
-        /// LoginUp control.
+        /// emailid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginUp;
+        protected global::System.Web.UI.WebControls.TextBox emailid;
         
         /// <summary>
-        /// LoginSing control.
+        /// passId control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginSing;
+        protected global::System.Web.UI.WebControls.TextBox passId;
     }
 }

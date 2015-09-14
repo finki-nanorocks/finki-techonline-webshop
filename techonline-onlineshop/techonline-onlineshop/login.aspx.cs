@@ -15,7 +15,7 @@ namespace techonline_onlineshop
         }
         protected void LoginSing_Click(object sender, EventArgs e)
         {
-            string email = "", pass = "";
+           /* string email = "", pass = "";
             email = LoginSing.Text;
             pass = Loginpassword.Text;
 
@@ -34,7 +34,7 @@ namespace techonline_onlineshop
                 }
 
             }
-            
+            */
         }
     }
 }
