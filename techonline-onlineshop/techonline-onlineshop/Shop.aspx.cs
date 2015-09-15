@@ -13,7 +13,7 @@ namespace techonline_onlineshop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
+
 
            string connectionString = ConfigurationManager.ConnectionStrings["TechonlineConnectionStr"].ConnectionString;
             SqlConnection conn = new SqlConnection(connectionString);
@@ -30,7 +30,7 @@ namespace techonline_onlineshop
 
                 while (r.Read())
                 {
-                    Product p = new Product(
+                    /*Product p = new Product(
                             r.GetInt32(0),
                             r.GetString(1),
                             r.GetString(2),
@@ -43,14 +43,13 @@ namespace techonline_onlineshop
                             r.GetDouble(10)
                             );
 
-                    allProducts.Add(p);
+                    allProducts.Add(p);*/
                 }
 
                 r.Close();
                 divProductsContainer.InnerHtml = HtmlGenerator.NEWProductsPageItems(allProducts);
             }catch(Exception err){}
-=======
-            String str = ConfigurationManager.ConnectionStrings["TechonlineConnectionStr"].ConnectionString;
+           /* String str = ConfigurationManager.ConnectionStrings["TechonlineConnectionStr"].ConnectionString;
             SqlConnection connection = new SqlConnection(str);
             SqlCommand cmd = new SqlCommand("SELECT * FROM products_info", connection);
             connection.Open();
@@ -59,7 +58,7 @@ namespace techonline_onlineshop
 
             while (r.Read())
             {
-                allProducts.Add(new Product(
+               allProducts.Add(new Product(
                     Convert.ToInt32(r.GetString(0)), //ID
                     Convert.ToString(r.GetString(1)), //Type
                     Convert.ToString(r.GetString(2)), // Brand
@@ -71,12 +70,10 @@ namespace techonline_onlineshop
                     Convert.ToString(r.GetString(8)), //OS
                     Convert.ToString(r.GetString(9)), //more_info
                     Convert.ToDouble(r.GetDouble(10)) //Price
-                 ));
-            }
+                 ));            */
+          //  }
 
->>>>>>> aec8a5a68751614e1acb55c91cdd328abdc3a774
-
-            divProductsContainer.InnerHtml = HtmlGenerator.NEWProductsPageItems(allProducts);
+          //  divProductsContainer.InnerHtml = HtmlGenerator.NEWProductsPageItems(allProducts);
         }
     }
 }

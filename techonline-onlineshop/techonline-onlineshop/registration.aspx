@@ -14,13 +14,14 @@
         
 <form runat="server" class="formoid-solid-dark" style="background-color:#FFFFFF;font-size:14px;font-family:'Roboto',Arial,Helvetica,sans-serif;color:#34495E;max-width:480px;min-width:150px" method="post">
     <div class="title"><h2>Registration...</h2></div>
-	<div class="element-input"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="FirstName" ID="LoginEmail" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
-	<div class="element-input"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="LastName" ID="Loginpassword" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
+	<div class="element-input"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="FirstName" ID="fnameid" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
+	<div class="element-input"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="LastName" ID="lnameid" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
     <div class="element-input"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="e-mail" ID="emailid" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
-	<div class="element-password"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="password" ID="passId" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
+	<div class="element-password"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="password" ID="passid" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
 </div>
 <div class="submit">
-    <asp:Button ID="Registerid" type="submit" Text="Register" runat="server"/>
+    <asp:Button ID="LoginBtn" type="submit" Text="Login" runat="server" OnClick="Log_Click"/>
+    <asp:Button ID="Registerid" type="submit" Text="Register" runat="server" OnClick="Registerid_Click"/>
 </div>
   
 

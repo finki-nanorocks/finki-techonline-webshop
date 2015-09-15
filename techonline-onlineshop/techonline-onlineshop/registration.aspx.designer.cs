@@ -13,22 +13,22 @@ namespace techonline_onlineshop {
     public partial class registration {
         
         /// <summary>
-        /// LoginEmail control.
+        /// fnameid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginEmail;
+        protected global::System.Web.UI.WebControls.TextBox fnameid;
         
         /// <summary>
-        /// Loginpassword control.
+        /// lnameid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Loginpassword;
+        protected global::System.Web.UI.WebControls.TextBox lnameid;
         
         /// <summary>
         /// emailid control.
@@ -40,13 +40,22 @@ namespace techonline_onlineshop {
         protected global::System.Web.UI.WebControls.TextBox emailid;
         
         /// <summary>
-        /// passId control.
+        /// passid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passId;
+        protected global::System.Web.UI.WebControls.TextBox passid;
+        
+        /// <summary>
+        /// LoginBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button LoginBtn;
         
         /// <summary>
         /// Registerid control.
