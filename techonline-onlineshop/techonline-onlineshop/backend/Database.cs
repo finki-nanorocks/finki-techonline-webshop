@@ -28,37 +28,37 @@ namespace TechonlineAPI
             this.connection = new SqlConnection(this.connectionString);
         }
 
-        public List<Product> GetAllProducts()
+       /* public List<Product> GetAllProducts()
         {
             SqlCommand cmd = new SqlCommand("SELECT * FROM products_info", this.connection);
             this.connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
+            SqlDataReader r = cmd.ExecuteReader();
 
             List<Product> allProducts = new List<Product>();
 
-            if(reader.HasRows)
+
+            while (r.Read())
             {
-                while ( reader.NextResult() )
-                {
-                    Product p = new Product(
-                                    Convert.ToInt32(reader.GetValue(0)), 
-                                    Convert.ToString(reader.GetValue(1)), 
-                                    Convert.ToString(reader.GetValue(2)), 
-                                    Convert.ToString(reader.GetValue(3)), 
-                                    Convert.ToString(reader.GetValue(4)), 
-                                    Convert.ToString(reader.GetValue(5)), 
-                                    Convert.ToString(reader.GetValue(6)), 
-                                    Convert.ToString(reader.GetValue(7)), 
-                                    Convert.ToString(reader.GetValue(8)), 
-                                    Convert.ToDouble(reader.GetValue(9))
-                                );
-                    allProducts.Add(p);
-                }
+                Product p = new Product(
+                        r.GetInt32(0),
+                        r.GetString(1),
+                        r.GetString(2),
+                        r.GetString(3),
+                        r.GetString(4),
+                        r.GetString(5),
+                        r.GetString(6),
+                        r.GetString(8),
+                        r.GetString(9),
+                        r.GetDouble(10)
+                        );
+
+                allProducts.Add(p);
             }
-            reader.Close();
+
+            r.Close();
             this.connection.Close();
             return allProducts;
-        }
+        }*/
 
 
         public void InsertProduct(Product p)

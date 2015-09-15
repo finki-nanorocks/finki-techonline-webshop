@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="Shop.aspx.cs" Inherits="techonline_onlineshop.Shop" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
+    <form id="form1" runat="server">
     <section id="content">
     <div id="category-breadcrumb">
         <div class="container">
@@ -63,6 +64,24 @@
 									    </ul>
 								    </div>
 							    </div><!-- End .view-count-box -->
+										
+						        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                                    <Columns>
+                                        <asp:BoundField DataField="id" HeaderText="id" SortExpression="id" />
+                                        <asp:BoundField DataField="product" HeaderText="product" SortExpression="product" />
+                                        <asp:BoundField DataField="manifacture" HeaderText="manifacture" SortExpression="manifacture" />
+                                        <asp:BoundField DataField="model" HeaderText="model" SortExpression="model" />
+                                        <asp:BoundField DataField="cpu" HeaderText="cpu" SortExpression="cpu" />
+                                        <asp:BoundField DataField="ram" HeaderText="ram" SortExpression="ram" />
+                                        <asp:BoundField DataField="hdd" HeaderText="hdd" SortExpression="hdd" />
+                                        <asp:BoundField DataField="gpu" HeaderText="gpu" SortExpression="gpu" />
+                                        <asp:BoundField DataField="os" HeaderText="os" SortExpression="os" />
+                                        <asp:BoundField DataField="more_info" HeaderText="more_info" SortExpression="more_info" />
+                                        <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
+                                        <asp:BoundField DataField="image_path" HeaderText="image_path" SortExpression="image_path" />
+                                    </Columns>
+                                </asp:GridView>
+                                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:db_techonlineGNMLConnectionString1 %>" ProviderName="<%$ ConnectionStrings:db_techonlineGNMLConnectionString1.ProviderName %>" SelectCommand="SELECT [id], [product], [manifacture], [model], [cpu], [ram], [hdd], [gpu], [os], [more_info], [price], [image_path] FROM [products_info]"></asp:SqlDataSource>
 										
 						    </div><!-- End .toolbox-pagination -->
         							
@@ -165,4 +184,5 @@
         </div><!-- End .row -->
     </div><!-- End .container -->
 </section>
+</form>
 </asp:Content>

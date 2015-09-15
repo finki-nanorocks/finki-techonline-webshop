@@ -173,6 +173,7 @@
     <Content Include="js\smoothscroll.js" />
     <Content Include="login.aspx" />
     <Content Include="MyAccount.aspx" />
+    <Content Include="registration.aspx" />
     <Content Include="ShowProduct.aspx" />
     <Content Include="Shop.aspx" />
     <Content Include="Web.config" />
@@ -252,6 +253,13 @@
     </Compile>
     <Compile Include="MyAccount.aspx.designer.cs">
       <DependentUpon>MyAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="registration.aspx.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="registration.aspx.designer.cs">
+      <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
     <Compile Include="ShowProduct.aspx.cs">
       <DependentUpon>ShowProduct.aspx</DependentUpon>
