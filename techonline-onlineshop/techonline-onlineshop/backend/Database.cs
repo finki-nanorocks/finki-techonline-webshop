@@ -4,13 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data.SqlClient;
 
 namespace TechonlineAPI
 {
     public class Database
     {
-       // private readonly string connstring = "Data Source=DARKO-LAPTOP\\SQLEXPRESS;Initial Catalog=db_techonlineGNML;Integrated Security=True";
-        // private readonly string connstring = "Data Source=ANDREJNANKOV;Initial Catalog=db_techonlineGNML;Integrated Security=True";
+      // private  string connstring = "Data Source=DARKO-LAPTOP\\SQLEXPRESS;Initial Catalog=db_techonlineGNML;Integrated Security=True";
+         public string connstring = "Data Source=ANDREJNANKOV;Initial Catalog=db_techonlineGNML;Integrated Security=True";
         private string connectionString
         {
             get; set;
@@ -117,9 +118,28 @@ namespace TechonlineAPI
             catch (Exception err) { this.connection.Close(); }
             return "";
         }
+
         public void addUser(User u)
         {
-
+            SqlConnection cs = new SqlConnection(connstring);
+            SqlCommand cmd = new SqlCommand("INSERT INTO User_info VALUES (@name,@lastname,@pass,@email,@isadmin);", cs);
+            cmd.Parameters.AddWithValue("@name", u.Name);
+            cmd.Parameters.AddWithValue("@lastname", u.Lastname);
+            cmd.Parameters.AddWithValue("@pass", "test123"); //ne gi pokazuva od klasata User pass i email wtf :@
+            cmd.Parameters.AddWithValue("@email", "test33");
+            cmd.Parameters.AddWithValue("@isadmin", 0);
+            try
+            {
+                cs.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                cs.Close();
+            }
+            cs.Close();
         }
+
+        
     }
 }
