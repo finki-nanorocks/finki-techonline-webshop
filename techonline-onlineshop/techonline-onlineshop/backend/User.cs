@@ -7,21 +7,18 @@ namespace TechonlineAPI
 {
     public class User
     {
-        public short id { get; set; }
         public String Name { get; set; }
         public String Lastname { get; set; }
-        public String Username { get; set; }
-        public String Sex { get; set; }
-        private DateTime Birthday { get; set; }
+        private string Email { get; set; }
+        private string Password { get; set; }
         public bool isAdmin { get; set; }
 
-        public User(String Name, String Lastname, String Username, String Sex, DateTime Birthday)
+        public User(String Name, String Lastname, String Email, String Password)
         {
             this.Name = Name;
             this.Lastname = Lastname;
-            this.Username = Username;
-            this.Sex = Sex;
-            this.Birthday = Birthday;
+            this.Email = Email;
+            this.Password = Password;
         }
 
     }
