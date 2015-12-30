@@ -1,2 +1,3 @@
-techonline-onlineshop/techonline-onlineshop.v12
-techonline-onlineshop/techonline-onlineshop/obj
+techonline-onlineshop/techonline-onlineshop/obj/*
+techonline-onlineshop/.vs/*
+techonline-onlineshop/techonline-onlineshop/bin/*
