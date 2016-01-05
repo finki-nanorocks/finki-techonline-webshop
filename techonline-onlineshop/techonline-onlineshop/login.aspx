@@ -17,7 +17,8 @@
     <div class="title"><h2>Login</h2></div>
 	<div class="element-input"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="e-mail" ID="LoginEmail" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
 	<div class="element-password"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="password" ID="Loginpassword" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
-	<div class="element-checkbox"><label class="title"></label><div class="column column1"><label><input type="checkbox" name="checkbox[]" value="remember me" /><span>remember me</span></label></div><span class="clearfix"></span>
+	<div ><label class="title"></label><div class="item-cont"><asp:Label runat="server" placeholder="" ID="TextBox1" class="large"></asp:Label><span class="icon-place"></span></div></div><br />
+     <div class="element-checkbox"><label class="title"></label><div class="column column1"><label><input type="checkbox" name="checkbox[]" value="remember me" /><span>remember me</span></label></div><span class="clearfix"></span>
 </div>
 <div class="submit">
     <asp:Button ID="Register" type="submit" Text="Register" runat="server" OnClick="Reg_Click"/>

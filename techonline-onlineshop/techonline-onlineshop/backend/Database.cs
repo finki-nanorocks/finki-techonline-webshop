@@ -6,12 +6,13 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Data.SqlClient;
 
+
 namespace TechonlineAPI
 {
     public class Database
     {
       // private  string connstring = "Data Source=DARKO-LAPTOP\\SQLEXPRESS;Initial Catalog=db_techonlineGNML;Integrated Security=True";
-         public string connstring = "Data Source=ANDREJNANKOV;Initial Catalog=db_techonlineGNML;Integrated Security=True";
+         public string connstring = "Data Source=NANO\\SQLEXPRESS;Initial Catalog=db_techonlineGNML;Integrated Security=True";
         private string connectionString
         {
             get; set;
@@ -80,11 +81,6 @@ namespace TechonlineAPI
 
         }
 
-        public void InsertNewUser(User u)
-        {
-
-        }
-
         public void RemoveUser(User u)
         {
 
@@ -110,13 +106,16 @@ namespace TechonlineAPI
                 }
                 if (tmp != 0)
                 {
-                    return name; // postoi, zacuvaj gi vo sesija imeto,pass,email treba da se implementira
+                    return name; // postoi, zacuvaj gi vo sesija imeto,pass,email treba da se implementira no i ne mora
                 }
                 this.connection.Close();
-                return "";
+                return name;
             }
-            catch (Exception err) { this.connection.Close(); }
-            return "";
+            catch (Exception err) { 
+                this.connection.Close();
+                return name;
+            }
+            return name;
         }
 
         public void addUser(User u)
@@ -125,8 +124,8 @@ namespace TechonlineAPI
             SqlCommand cmd = new SqlCommand("INSERT INTO User_info VALUES (@name,@lastname,@pass,@email,@isadmin);", cs);
             cmd.Parameters.AddWithValue("@name", u.Name);
             cmd.Parameters.AddWithValue("@lastname", u.Lastname);
-            cmd.Parameters.AddWithValue("@pass", "test123"); //ne gi pokazuva od klasata User pass i email wtf :@
-            cmd.Parameters.AddWithValue("@email", "test33");
+            cmd.Parameters.AddWithValue("@pass", u.Password); 
+            cmd.Parameters.AddWithValue("@email", u.Email);
             cmd.Parameters.AddWithValue("@isadmin", 0);
             try
             {
@@ -139,7 +138,51 @@ namespace TechonlineAPI
             }
             cs.Close();
         }
+        public int get_len_client()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [User_info]", this.connection);
+            int tmp = 0;// kolku korisnici
+            try
+            {
+                this.connection.Open();
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                        tmp++;                     
+                }
+                this.connection.Close();
+                return tmp;
+            }
+            catch (Exception err)
+            {
+                this.connection.Close();
+                return tmp;
+            }
+            return tmp;
+        }
+        public int get_len_article()
+        {
+            SqlCommand cmd = new SqlCommand("SELECT * FROM [products_info]", this.connection);
+            int tmp = 0;// kolku korisnici
+            try
+            {
+                this.connection.Open();
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    tmp++;
+                }
+                this.connection.Close();
+                return tmp;
+            }
+            catch (Exception err)
+            {
+                this.connection.Close();
+                return tmp;
+            }
+            return tmp;
 
+        }
         
     }
 }

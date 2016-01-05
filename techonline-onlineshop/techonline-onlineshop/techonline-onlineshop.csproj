@@ -174,10 +174,10 @@
     <Content Include="login.aspx" />
     <Content Include="MyAccount.aspx" />
     <Content Include="registration.aspx" />
+    <Content Include="servis_korisnik.asmx" />
     <Content Include="ShowProduct.aspx" />
     <Content Include="Shop.aspx" />
     <Content Include="Web.config" />
-    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="404.aspx.cs">
@@ -261,6 +261,10 @@
     <Compile Include="registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
+    <Compile Include="servis_korisnik.asmx.cs">
+      <DependentUpon>servis_korisnik.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ShowProduct.aspx.cs">
       <DependentUpon>ShowProduct.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,13 +280,6 @@
     <Compile Include="Shop.aspx.designer.cs">
       <DependentUpon>Shop.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.Master" />
@@ -296,17 +293,12 @@
     <Content Include="fonts\glyphicons-halflings-regulard41d.eot" />
     <Content Include="forms_all\formoid1\.htaccess" />
     <Content Include="forms_all\formoid1\form.formoid" />
-    <Content Include="forms_all\formoid1\form.php" />
     <Content Include="forms_all\formoid1\formoid.eot" />
     <Content Include="forms_all\formoid1\formoid.ttf" />
     <Content Include="forms_all\formoid1\formoid.woff" />
-    <Content Include="forms_all\formoid1\handler.php" />
-    <Content Include="forms_all\formoid1\helpers.php" />
     <Content Include="forms_all\formoid1\icons.eot" />
     <Content Include="forms_all\formoid1\icons.ttf" />
     <Content Include="forms_all\formoid1\icons.woff" />
-    <Content Include="forms_all\formoid1\JSON.php" />
-    <Content Include="forms_all\formoid1\recaptchalib.php" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -314,7 +306,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
