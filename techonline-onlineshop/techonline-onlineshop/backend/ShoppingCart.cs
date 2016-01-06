@@ -27,13 +27,13 @@ namespace TechonlineAPI
         public double GetTotalPrice()
         {
             double total = 0.0;
-            foreach(CartItem item in this.CartItems)
+            foreach (CartItem item in this.CartItems)
             {
-                if(item.quantity > 0)
+                if (item.quantity > 0)
                 {
                     total += ((item.product.Price + 0) * item.quantity);
                 }
-               
+
             }
             return total;
         }

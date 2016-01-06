@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace techonline_onlineshop
+namespace TechonlineFrontend
 {
     public class Global : System.Web.HttpApplication
     {
@@ -13,8 +13,7 @@ namespace techonline_onlineshop
         protected void Application_Start(object sender, EventArgs e)
         {
             // Add the database as a global variable
-            Application["DB"] = new TechonlineAPI.Database();
-
+          
         }
 
         protected void Session_Start(object sender, EventArgs e)

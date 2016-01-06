@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="techonline_onlineshop.About" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="About.aspx.cs" Inherits="TechonlineFrontend.About" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <section id="content">
     <div id="page-header">

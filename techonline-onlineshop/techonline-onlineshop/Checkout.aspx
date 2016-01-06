@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="techonline_onlineshop.Checkout" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="Checkout.aspx.cs" Inherits="TechonlineFrontend.Checkout" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 <section id="content">
     <div id="breadcrumb-container">

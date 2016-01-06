@@ -5,7 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace techonline_onlineshop
+using System.Diagnostics;
+
+namespace TechonlineFrontend
 {
     public partial class home : System.Web.UI.Page
     {

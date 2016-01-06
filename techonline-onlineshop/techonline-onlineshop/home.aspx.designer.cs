@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace techonline_onlineshop
+namespace TechonlineFrontend
 {
 
 

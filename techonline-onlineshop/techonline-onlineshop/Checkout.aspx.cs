@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace techonline_onlineshop
+namespace TechonlineFrontend
 {
     public partial class Checkout : System.Web.UI.Page
     {

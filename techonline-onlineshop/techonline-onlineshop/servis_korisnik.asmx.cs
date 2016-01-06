@@ -29,14 +29,12 @@ namespace techonline_onlineshop
         [WebMethod]
         public int NumberOfClientsInBase()
         {
-            Database d = new Database();
-            return d.get_len_client();
+            return 0;
         }
         [WebMethod]
         public int NumberOfArticlesInBase()
         {
-            Database d = new Database();
-            return d.get_len_article();
+            return 0;
         }
     }
 }

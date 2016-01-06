@@ -7,7 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace techonline_onlineshop {
+namespace TechonlineFrontend
+{
     
     
     public partial class Cart {

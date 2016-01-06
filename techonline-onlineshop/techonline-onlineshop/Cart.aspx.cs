@@ -6,7 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using TechonlineAPI;
 
-namespace techonline_onlineshop
+namespace TechonlineFrontend
 {
     public partial class Cart : System.Web.UI.Page
     {

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using TechonlineAPI;
 using System.Data.SqlClient;
 
-namespace techonline_onlineshop
+namespace TechonlineFrontend
 {
     public partial class _default : System.Web.UI.MasterPage
     {

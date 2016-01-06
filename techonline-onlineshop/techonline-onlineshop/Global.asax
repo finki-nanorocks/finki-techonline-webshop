@@ -1,1 +1,1 @@
-﻿<%@ Application Codebehind="Global.asax.cs" Inherits="techonline_onlineshop.Global" Language="C#" %>
+﻿<%@ Application Codebehind="Global.asax.cs" Inherits="TechonlineFrontend.Global" Language="C#" %>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="techonline_onlineshop._404" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="404.aspx.cs" Inherits="TechonlineFrontend._404" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
 <section id="content" class="no-content">

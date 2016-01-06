@@ -8,7 +8,7 @@ using System.Data.SqlClient;
 using TechonlineAPI;
 
 
-namespace techonline_onlineshop
+namespace TechonlineFrontend
 {
     public partial class registration : System.Web.UI.Page
     {
@@ -23,11 +23,7 @@ namespace techonline_onlineshop
         }
         protected void Registerid_Click(object sender, EventArgs e)
         {
-            User u = new User(fnameid.Text, lnameid.Text, emailid.Text, passid.Text);
-            Database d = new Database();
-            d.addUser(u);
-            fnameid.Text = lnameid.Text = emailid.Text = passid.Text = "";
-            Response.Redirect("~/Login.aspx");
+
         }
     }
 }

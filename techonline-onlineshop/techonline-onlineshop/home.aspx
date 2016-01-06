@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="techonline_onlineshop.home" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="home.aspx.cs" Inherits="TechonlineFrontend.home" %>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 <section id="content">
     <div id="slider-rev-container">

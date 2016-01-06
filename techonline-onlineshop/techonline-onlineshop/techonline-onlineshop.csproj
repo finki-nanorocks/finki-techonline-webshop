@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>techonline_onlineshop</RootNamespace>
+    <RootNamespace>TechonlineFrontend</RootNamespace>
     <AssemblyName>techonline-onlineshop</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
@@ -178,6 +178,7 @@
     <Content Include="ShowProduct.aspx" />
     <Content Include="Shop.aspx" />
     <Content Include="Web.config" />
+    <None Include="WebConnections.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="404.aspx.cs">
@@ -194,14 +195,12 @@
     <Compile Include="About.aspx.designer.cs">
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
-    <Compile Include="backend\HtmlGenerator.cs" />
-    <Compile Include="backend\Order.cs" />
-    <Compile Include="backend\ShoppingCart.cs" />
     <Compile Include="backend\CartItem.cs" />
-    <Compile Include="backend\Database.cs" />
+    <Compile Include="backend\HtmlGenerator.cs" />
+    <Compile Include="backend\System.cs" />
     <Compile Include="backend\Product.cs" />
+    <Compile Include="backend\ShoppingCart.cs" />
     <Compile Include="backend\User.cs" />
-    <Compile Include="backend\Userbase.cs" />
     <Compile Include="Cart.aspx.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -307,7 +306,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadata Include="Service References\" />
+    <Folder Include="images\laptop\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
