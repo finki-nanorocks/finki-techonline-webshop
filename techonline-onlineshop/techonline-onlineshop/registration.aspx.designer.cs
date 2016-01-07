@@ -7,47 +7,55 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TechonlineFrontend
-{
+namespace TechonlineFrontend {
     
     
     public partial class registration {
         
         /// <summary>
-        /// fnameid control.
+        /// actionStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fnameid;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl actionStatus;
         
         /// <summary>
-        /// lnameid control.
+        /// regfirstname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lnameid;
+        protected global::System.Web.UI.WebControls.TextBox regfirstname;
         
         /// <summary>
-        /// emailid control.
+        /// reglastname control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailid;
+        protected global::System.Web.UI.WebControls.TextBox reglastname;
         
         /// <summary>
-        /// passid control.
+        /// regemail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passid;
+        protected global::System.Web.UI.WebControls.TextBox regemail;
+        
+        /// <summary>
+        /// regpass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputPassword regpass;
         
         /// <summary>
         /// LoginBtn control.

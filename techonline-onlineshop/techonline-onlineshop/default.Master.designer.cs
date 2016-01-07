@@ -22,6 +22,33 @@ namespace TechonlineFrontend {
         protected global::System.Web.UI.HtmlControls.HtmlLink googlefont;
         
         /// <summary>
+        /// headerLoginContainer control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl headerLoginContainer;
+        
+        /// <summary>
+        /// headerWelcomeText control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl headerWelcomeText;
+        
+        /// <summary>
+        /// headerLoginLogoutLinks control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl headerLoginLogoutLinks;
+        
+        /// <summary>
         /// lblCartItemCount control.
         /// </summary>
         /// <remarks>

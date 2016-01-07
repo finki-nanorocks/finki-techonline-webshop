@@ -197,7 +197,7 @@
     </Compile>
     <Compile Include="backend\CartItem.cs" />
     <Compile Include="backend\HtmlGenerator.cs" />
-    <Compile Include="backend\System.cs" />
+    <Compile Include="backend\TOS.cs" />
     <Compile Include="backend\Product.cs" />
     <Compile Include="backend\ShoppingCart.cs" />
     <Compile Include="backend\User.cs" />
@@ -279,6 +279,7 @@
     <Compile Include="Shop.aspx.designer.cs">
       <DependentUpon>Shop.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TOSession.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="default.Master" />

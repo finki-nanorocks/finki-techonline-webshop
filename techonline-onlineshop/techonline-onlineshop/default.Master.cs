@@ -27,8 +27,27 @@ namespace TechonlineFrontend
                 this.UpdateHeaderCart();
             }
 
-           // Database db = (Database)Application.Get("DB");
-           // List<Product> allProducts = db.GetAllProducts();
+
+            //Set header
+            if (TOSession.Current.user != null)
+            {
+                headerWelcomeText.InnerHtml = "Welcome to Techonline, " + TOSession.Current.user.Name + "! ";
+                headerLoginLogoutLinks.InnerHtml = "<a href='" + HttpContext.Current.Request.Url.AbsoluteUri + "?logout=true'>Logout</a>";
+            }
+
+            //Logout user
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["logout"]) && string.Equals(Request.QueryString["logout"], "true"))
+            {
+                if(TOSession.Current.user != null)
+                {
+                    TOSession.Current.user = null;
+                    Response.Write("<script>alert('You have been logged out successfully!');</script>");
+                    String urlWithoutQueryString = HttpContext.Current.Request.Url.AbsoluteUri.Substring(0, HttpContext.Current.Request.Url.AbsoluteUri.IndexOf("?"));
+                    Response.Redirect(urlWithoutQueryString, false);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
+                
+            }
 
         }
 

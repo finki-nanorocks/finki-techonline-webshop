@@ -14,6 +14,73 @@ namespace TechonlineFrontend
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //If user is logged in, no need for registration
+            if(TOSession.Current.user != null)
+            {
+                Response.Redirect("home.aspx", false);
+                Context.ApplicationInstance.CompleteRequest();
+            }
+
+            //If post request
+            if(IsPostBack)
+            {
+                bool valid = true;
+
+                //Check if all fields are filled in
+                if(string.IsNullOrWhiteSpace(Request["regfirstname"]) || string.IsNullOrWhiteSpace(Request["reglastname"]) 
+                    || string.IsNullOrWhiteSpace(Request["regemail"])
+                    || string.IsNullOrWhiteSpace(Request["regpass"]) ) { valid = false; }
+
+
+                if( valid )
+                {
+                    //Validate for email
+                    if (! TOS.Instance.IsValidEmail(Request["regemail"] ) )
+                    {
+                        valid = false;
+                    }
+
+                    //Validate password
+                    if (Request["regpass"].Length < 6)
+                    {
+                        valid = false;
+                    }
+                }
+
+
+                //Everything valid. Go on
+                if (valid)
+                {
+                    bool registrationStatus = TOS.Instance.register(
+                        Request["regfirstname"], 
+                        Request["reglastname"], 
+                        Request["regemail"], 
+                        Request["regpass"], 
+                        "regular"
+                    );
+
+                    if (registrationStatus)
+                    {
+                        Response.Redirect("registration.aspx?action=success", false);
+                        Context.ApplicationInstance.CompleteRequest();
+                    }
+                }
+                Response.Redirect("registration.aspx?action=danger", false);
+                Context.ApplicationInstance.CompleteRequest();
+            }
+
+            //Get requests
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["action"]) && string.Equals(Request.QueryString["action"], "success"))
+            {
+                actionStatus.Attributes["class"] = "alert alert-success";
+                actionStatus.InnerHtml = "<strong>Success!</strong> Successful Registration! You can login now <a href='/login.aspx'>here</a>";
+            }
+
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["action"]) && string.Equals(Request.QueryString["action"], "danger"))
+            {
+                actionStatus.Attributes["class"] = "alert alert-danger";
+                actionStatus.InnerHtml = "<strong>Error!</strong> Please check your form again. Valid password with over 6 characters and email are required.";
+            }
 
         }
         protected void Log_Click(object sender, EventArgs e)

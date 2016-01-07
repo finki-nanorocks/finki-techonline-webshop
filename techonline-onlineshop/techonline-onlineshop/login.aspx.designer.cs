@@ -7,29 +7,37 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TechonlineFrontend
-{
+namespace TechonlineFrontend {
     
     
     public partial class login {
         
         /// <summary>
-        /// LoginEmail control.
+        /// actionStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LoginEmail;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl actionStatus;
         
         /// <summary>
-        /// Loginpassword control.
+        /// loginemail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Loginpassword;
+        protected global::System.Web.UI.WebControls.TextBox loginemail;
+        
+        /// <summary>
+        /// loginpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox loginpassword;
         
         /// <summary>
         /// TextBox1 control.

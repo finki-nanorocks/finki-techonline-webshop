@@ -14,13 +14,48 @@ namespace TechonlineFrontend
         protected void Page_Load(object sender, EventArgs e)
         {
             TextBox1.Text = "";
+
+            if(IsPostBack)
+            {
+
+                if(!string.IsNullOrWhiteSpace( Request["loginemail"]) && !string.IsNullOrWhiteSpace(Request["loginpassword"]))
+                {
+                    String email = Request["loginemail"];
+                    String password = Request["loginpassword"];
+
+                    if(TOS.Instance.canLogin(email, password))
+                    {
+                        TOSession.Current.user = TOS.Instance.getUser(email);
+                        Response.Redirect("home.aspx", false);
+                        Context.ApplicationInstance.CompleteRequest();
+                    }
+                    else
+                    {
+                        Response.Redirect("login.aspx?loginfail=true", false);
+                        Context.ApplicationInstance.CompleteRequest();
+                    }
+
+                }
+            }
+            else
+            {
+                if(!string.IsNullOrWhiteSpace(Request["loginfail"]) && string.Equals(Request["loginfail"], "true"))
+                {
+                    actionStatus.Attributes["class"] = "alert alert-danger";
+                    actionStatus.InnerHtml = "<strong>Error!</strong> Wrong credentials. Please try again.";
+                }
+            }
+
         }
          protected void Reg_Click(object sender, EventArgs e)
         {
-            Response.Redirect("registration.aspx");
+            //Avoid 'System.Threading.ThreadAbortException'
+            Response.Redirect("registration.aspx", false);
+            Context.ApplicationInstance.CompleteRequest();
         }
         protected void LoginSing_Click(object sender, EventArgs e)
         {
+
 
         }
     }
