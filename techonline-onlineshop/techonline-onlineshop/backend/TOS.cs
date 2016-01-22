@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.ComponentModel.DataAnnotations;
 using TechonlineFrontend.backend;
+using System.Web;
 
 namespace TechonlineAPI
 {
@@ -278,6 +279,12 @@ namespace TechonlineAPI
             }
 
             return products;
+        }
+
+        public String getFullProductImagePath(String path, HttpContext current)
+        {
+            string siteUrl = current.Request.Url.Scheme + "://" + current.Request.Url.Authority + current.Request.ApplicationPath.TrimEnd('/');
+            return siteUrl + TOS.LAPTOPS_IMG_URL + path;
         }
 
 

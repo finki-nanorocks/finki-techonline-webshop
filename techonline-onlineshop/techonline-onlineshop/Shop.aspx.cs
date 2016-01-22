@@ -50,34 +50,8 @@ namespace TechonlineFrontend
             }
 
             //Loop Products
-            String html = "<div class='row'>";
-            for(int i = 0, j = 0; i < all.Count; i++)
-            {
-                j++;
-                if (j == 0) {}
-                string siteUrl = HttpContext.Current.Request.Url.Scheme + "://" + HttpContext.Current.Request.Url.Authority + HttpContext.Current.Request.ApplicationPath.TrimEnd('/');
-                html += "<div class='col-sm-4'>";
-                html += "<div class='item item-hover'>";
-                html += "<div class='item-image-wrapper'>";
-                html += "<figure class='item-image-container'><a href='product.html'><img class='item-image' alt='item1' src='"+ siteUrl  + TOS.LAPTOPS_IMG_URL + all[i].image_path +"'></a></figure>";
-                html += "<div class='item-price-container'><span class='item-price'>$" + Convert.ToString(all[i].price) + "</span></div>";
-                html += "</div>";
-                html += "<div class='item-meta-container'>";
-                html += "<h3 class='item-name'><a href='product.html'>" + Convert.ToString(all[i].name) + "</a></h3>";
-                html += "<div class='item-action'>";
-                html += "<a class='item-add-btn' href='?add_to_cart=" + all[i].id  + "'><span class='icon-cart-text'>Add to Cart</span></a>";
-                html += "</div>";
-                html += "</div>";
-                html += "</div>";
-                html += "</div>";
-                if(j == 3)
-                {
-                    html += "</div><div class='row'>";
-                    j = 0;
-                }
-            }
-            html += "</div>"; //close oepend row
-            divProductsContainer.InnerHtml = html;
+            
+            divProductsContainer.InnerHtml = HtmlGenerator.NEWShopContents(all, HttpContext.Current);
         }
     }
 }

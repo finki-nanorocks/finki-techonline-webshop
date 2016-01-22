@@ -74,7 +74,7 @@ namespace TechonlineFrontend
             if(TOSession.Current.cart != null)
             {
                 ShoppingCart currentCart = TOSession.Current.cart;
-                ulCartDropdown.InnerHtml = HtmlGenerator.NEWCartDropdownItemHTML(currentCart.CartItems);
+                ulCartDropdown.InnerHtml = HtmlGenerator.NEWCartDropdownItemHTML(currentCart.CartItems, HttpContext.Current);
                 lblCartItemCount.Text = Convert.ToString(currentCart.CartItems.Count);
                 lblCartPrice.Text = Convert.ToString(currentCart.GetTotalPrice());
                 lblPriceShipping.Text = Convert.ToString(currentCart.GetTotalShippingPrice());

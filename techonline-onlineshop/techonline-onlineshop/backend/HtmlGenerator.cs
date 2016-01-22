@@ -10,7 +10,7 @@ namespace TechonlineAPI
 {
     public class HtmlGenerator
     {
-        public static string NEWCartDropdownItemHTML(List<CartItem> CartItems)
+        public static string NEWCartDropdownItemHTML(List<CartItem> CartItems, HttpContext context)
         {
             string html = "";
             int count = 0;
@@ -19,7 +19,7 @@ namespace TechonlineAPI
                 count++;
                 html += "<li class='item clearfix'>";
                 html += "<a href = '/home.aspx?deleteCartItem=" + item.product.id + "' title='Delete item' class='delete-item'><i class='fa fa-times'></i></a>";
-                html += "<figure><a href ='/product?id=" + item.product.id + "'><img src='images/products/thumbnails/shoe1.jpg' alt='shoe 1'></a></figure>";
+                html += "<figure><a href ='/product?id=" + item.product.id + "'><img src='" + TOS.Instance.getFullProductImagePath(item.product.image_path, context) + "' alt='shoe 1'></a></figure>";
                 html += "<div class='dropdown-cart-details'>";
                 html += "<p class='item-name'><a href='/product?id=" + item.product.id + "'>" + item.product.name + "</a></p>";
                 html += "<p>" + item.quantity + "x <span class='item-price'>$" + item.product.price + "</span></p></div></li>";          
@@ -27,7 +27,7 @@ namespace TechonlineAPI
             return html;
         }
 
-        public static string NEWCartItemsHTML(List<CartItem> CartItems)
+        public static string NEWCartItemsHTML(List<CartItem> CartItems, HttpContext context)
         {
             string html = "";
             foreach (CartItem item in CartItems)
@@ -35,7 +35,7 @@ namespace TechonlineAPI
                 html += "<tr>";
                 html += "<td class='item-name-col'>";
                 html += "<figure>";
-                html += "<a href='#'><img src='images/products/"+ item.product.id +".png'></a>";
+                html += "<a href='#'><img src='" + TOS.Instance.getFullProductImagePath(item.product.image_path, context) + "'></a>";
                 html += "</figure>";
                 html += "<header class='item-name'><a href='#'>" + item.product.cat_name + " " + item.product.name + "</a></header>";
                 html += "<ul>";
@@ -61,9 +61,40 @@ namespace TechonlineAPI
             return html;
         }
 
+        public static string NEWShopContents(List<Product> all, HttpContext context)
+        {
+            String html = "<div class='row'>";
+            for (int i = 0, j = 0; i < all.Count; i++)
+            {
+                j++;
+                if (j == 0) { }
+                html += "<div class='col-sm-4'>";
+                html += "<div class='item item-hover'>";
+                html += "<div class='item-image-wrapper'>";
+                html += "<figure class='item-image-container'><a href='product.html'><img class='item-image' alt='item1' src='" + TOS.Instance.getFullProductImagePath(all[i].image_path, context) + "'></a></figure>";
+                html += "<div class='item-price-container'><span class='item-price'>$" + Convert.ToString(all[i].price) + "</span></div>";
+                html += "</div>";
+                html += "<div class='item-meta-container'>";
+                html += "<h3 class='item-name'><a href='product.html'>" + Convert.ToString(all[i].name) + "</a></h3>";
+                html += "<div class='item-action'>";
+                html += "<a class='item-add-btn' href='?add_to_cart=" + all[i].id + "'><span class='icon-cart-text'>Add to Cart</span></a>";
+                html += "</div>";
+                html += "</div>";
+                html += "</div>";
+                html += "</div>";
+                if (j == 3)
+                {
+                    html += "</div><div class='row'>";
+                    j = 0;
+                }
+            }
+            html += "</div>"; //close oepend row
+            return html;
+        }
+
         public static string success(String msg)
         {
-            return "<div class='alert alert-success fade in'><a href='#' class='close' data-dismiss='alert'>&times;</a><strong>Success!</strong>" + msg + "</div>";
+            return "<div class='alert alert-success fade in'><a href='#' class='close' data-dismiss='alert'>&times;</a><strong>Success!</strong> " + msg + "</div>";
         }
     }
 }

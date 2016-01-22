@@ -7,11 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TechonlineFrontend
-{
+namespace TechonlineFrontend {
     
     
     public partial class Cart {
+        
+        /// <summary>
+        /// cartInner control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl cartInner;
         
         /// <summary>
         /// tblCart control.
@@ -21,5 +29,23 @@ namespace TechonlineFrontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl tblCart;
+        
+        /// <summary>
+        /// subtotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell subtotal;
+        
+        /// <summary>
+        /// total control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell total;
     }
 }

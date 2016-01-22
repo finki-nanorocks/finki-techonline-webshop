@@ -14,8 +14,18 @@ namespace TechonlineFrontend
         {
             if ( ! Page.IsPostBack)
             {
-                ShoppingCart currentCart = (ShoppingCart)HttpContext.Current.Session["currentCart"];
-                tblCart.InnerHtml = HtmlGenerator.NEWCartItemsHTML(currentCart.CartItems);
+                ShoppingCart currentCart = TOSession.Current.cart;
+                if(currentCart.CartItems.Count  <= 0)
+                {
+                    cartInner.InnerHtml = "Cart empty. Please <a href='Shop.aspx'>add</a> some products to the cart and comeback here!";
+                }else
+                {
+                    Double t = currentCart.GetTotalPrice();
+                    tblCart.InnerHtml = HtmlGenerator.NEWCartItemsHTML(currentCart.CartItems, HttpContext.Current);
+                    subtotal.InnerHtml = "$" + Convert.ToString(t);
+                    total.InnerHtml = "$" + Convert.ToString(t);
+                }
+                
             }
 
         }
