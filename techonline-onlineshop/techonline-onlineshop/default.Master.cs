@@ -49,13 +49,31 @@ namespace TechonlineFrontend
                 
             }
 
+            ///Add To Cart
+            if (Request.QueryString["add_to_cart"] != null)
+            {
+                int product_id = Convert.ToInt32(Request.QueryString["add_to_cart"]);
+                Product p = TOS.Instance.getProduct(product_id);
+                if(p != null)
+                {
+                    TOSession.Current.cart.AddToCart(p);
+                    string redirect = Request.RawUrl.Substring(0, Request.RawUrl.IndexOf("?"));
+                    Response.Redirect(redirect + "?atc_status=1");
+                }
+                else
+                {
+                    TechonlineAPI.TOS.Instance.Debug("Problem retreiving product");
+                }
+                
+            }
+
         }
 
         private void UpdateHeaderCart()
         {
-            if(null != HttpContext.Current.Session["currentCart"])
+            if(TOSession.Current.cart != null)
             {
-                ShoppingCart currentCart = (ShoppingCart)HttpContext.Current.Session["currentCart"];
+                ShoppingCart currentCart = TOSession.Current.cart;
                 ulCartDropdown.InnerHtml = HtmlGenerator.NEWCartDropdownItemHTML(currentCart.CartItems);
                 lblCartItemCount.Text = Convert.ToString(currentCart.CartItems.Count);
                 lblCartPrice.Text = Convert.ToString(currentCart.GetTotalPrice());
@@ -75,9 +93,9 @@ namespace TechonlineFrontend
         {
             int cartItemId = Convert.ToInt32(Request.QueryString["deleteCartItem"]);
 
-            if (HttpContext.Current.Session["currentCart"] != null)
+            if (TOSession.Current.cart  != null)
             {
-                ShoppingCart crt = (ShoppingCart)Session["currentCart"];
+                ShoppingCart crt = TOSession.Current.cart;
                 List<CartItem> items = crt.CartItems;
                 for (int i = 0; i < items.Count; i++)
                 {
@@ -87,7 +105,7 @@ namespace TechonlineFrontend
                     }
                 }
                 crt.CartItems = items;
-                Session["currentCart"] = crt;
+                TOSession.Current.cart = crt;
             }
         }
     }

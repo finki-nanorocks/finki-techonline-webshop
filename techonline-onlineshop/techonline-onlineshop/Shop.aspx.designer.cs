@@ -7,8 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TechonlineFrontend
-{
+namespace TechonlineFrontend {
     
     
     public partial class Shop {
@@ -23,6 +22,15 @@ namespace TechonlineFrontend
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// displaymsgs control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl displaymsgs;
+        
+        /// <summary>
         /// divProductsContainer control.
         /// </summary>
         /// <remarks>
@@ -30,5 +38,14 @@ namespace TechonlineFrontend
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divProductsContainer;
+        
+        /// <summary>
+        /// brands control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl brands;
     }
 }

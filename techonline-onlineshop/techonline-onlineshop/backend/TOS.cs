@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Data.SqlClient;
-using System.Data;
 using System.ComponentModel.DataAnnotations;
+using TechonlineFrontend.backend;
 
 namespace TechonlineAPI
 {
     public class TOS : IDisposable
     {
-        private static readonly bool WITH_PASSWORD = true;
+        public static readonly bool WITH_PASSWORD = true;
+        public static readonly String LAPTOPS_IMG_URL = "/images/laptop/"; 
 
         //Singleton instance
         private static TOS instance = null;
@@ -156,6 +154,132 @@ namespace TechonlineAPI
             }
             return affected > 0;
         }
+
+
+        public List<Brand> getAllBrands()
+        {
+            List<Brand> brands = new List<Brand>();
+
+            String sstr = "SELECT C.id, C.cat_name, COUNT(*) as total FROM categories C, products P WHERE C.id = P.category GROUP BY C.id, C.cat_name";
+            using (SqlCommand cmd = new SqlCommand(sstr, connection))
+            {
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["id"]);
+                    String name = Convert.ToString(reader["cat_name"]);
+                    int total = Convert.ToInt32(reader["total"]);
+                    brands.Add( new Brand(id, name, total ) );
+                }
+                reader.Close();
+            }
+           return brands;
+        }
+
+        public Product getProduct(int product_id)
+        {
+            String query = "SELECT * FROM products, categories WHERE products.category=categories.id AND products.id=@id";
+            Product p = null;
+
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@id", product_id);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["id"]);
+                    String name = Convert.ToString(reader["name"]);
+                    String image_path = Convert.ToString(reader["image_path"]);
+                    String description = Convert.ToString(reader["description"]);
+                    int ram_amount = Convert.ToInt16(reader["ram_amount"]);
+                    String ram_type = Convert.ToString(reader["ram_type"]);
+                    Double cpu_freq = Convert.ToDouble(reader["cpu_freq"]);
+                    String cpu_brand = Convert.ToString(reader["cpu_brand"]);
+                    int hdd_amount = Convert.ToInt32(reader["hdd_amount"]);
+                    String hdd_brand = Convert.ToString(reader["hdd_brand"]);
+                    String gpu = Convert.ToString(reader["gpu"]);
+                    int display = Convert.ToInt16(reader["display"]);
+                    int category = Convert.ToInt32(reader["category"]);
+                    String cat_name = Convert.ToString(reader["cat_name"]);
+                    Double price = Convert.ToDouble(reader["price"]);
+                    var discount = reader["discount"] as string;
+
+                    int i = 0;
+                    if ( ! string.IsNullOrWhiteSpace(Convert.ToString(discount)))
+                    {
+                        
+                        i = Convert.ToInt32(discount);
+                    }
+                    p = new Product(
+                            id, name, image_path, description, ram_amount, ram_type, cpu_freq, cpu_brand, hdd_amount, hdd_brand, gpu, display, cat_name, price, i
+                        );
+                }
+                reader.Close();
+            }
+            return p;
+        }
+
+        public List<Product> getProducts(int brand)
+        {
+
+            List<Product> products = new List<Product>();
+            String query;
+            if (brand > -1)
+            {
+                query = "SELECT * FROM products, categories WHERE products.category=categories.id AND products.category=@id";
+            }
+            else
+            {
+                query = "SELECT * FROM products, categories WHERE products.category=categories.id";
+            }
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+
+                if(brand > -1)
+                {
+                    cmd.Parameters.AddWithValue("@id", brand);
+                }
+                
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int id = Convert.ToInt32(reader["id"]);
+                    String name = Convert.ToString(reader["name"]);
+                    String image_path = Convert.ToString(reader["image_path"]);
+                    String description = Convert.ToString(reader["description"]);
+                    int ram_amount = Convert.ToInt16(reader["ram_amount"]);
+                    String ram_type = Convert.ToString(reader["ram_type"]);
+                    Double cpu_freq = Convert.ToDouble(reader["cpu_freq"]);
+                    String cpu_brand = Convert.ToString(reader["cpu_brand"]);
+                    int hdd_amount = Convert.ToInt32(reader["hdd_amount"]);
+                    String hdd_brand = Convert.ToString(reader["hdd_brand"]);
+                    String gpu = Convert.ToString(reader["gpu"]);
+                    int display = Convert.ToInt16(reader["display"]);
+                    int category = Convert.ToInt32(reader["category"]);
+                    String cat_name = Convert.ToString(reader["cat_name"]);
+                    Double price = Convert.ToDouble(reader["price"]);
+                    var discount = reader["discount"] as string;
+
+                    int i = 0;
+                    if (string.IsNullOrWhiteSpace(Convert.ToString(discount)))
+                    {
+                        Debug("Discount null");
+                    }
+                    else
+                    {
+                        i = Convert.ToInt32(discount);
+                    }
+
+                    products.Add(new Product(
+                            id, name, image_path, description, ram_amount, ram_type, cpu_freq, cpu_brand, hdd_amount, hdd_brand, gpu, display, cat_name, price, i
+                        ));
+                }
+                reader.Close();
+            }
+
+            return products;
+        }
+
 
         //Email validation
         public bool IsValidEmail(String email)
