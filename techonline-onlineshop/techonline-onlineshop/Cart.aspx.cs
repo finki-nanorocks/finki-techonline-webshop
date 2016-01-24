@@ -17,7 +17,8 @@ namespace TechonlineFrontend
                 ShoppingCart currentCart = TOSession.Current.cart;
                 if(currentCart.CartItems.Count  <= 0)
                 {
-                    cartInner.InnerHtml = "Cart empty. Please <a href='Shop.aspx'>add</a> some products to the cart and comeback here!";
+                    cartInner.InnerHtml = "<h2>Cart Empty</h2>";
+                    cartInner.InnerHtml += "Cart empty. Please <a href='Shop.aspx'><strong>add</strong></a> some products to the cart and comeback here!";
                 }else
                 {
                     Double t = currentCart.GetTotalPrice();

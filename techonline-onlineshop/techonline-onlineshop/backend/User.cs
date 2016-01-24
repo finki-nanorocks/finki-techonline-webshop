@@ -7,6 +7,7 @@ namespace TechonlineAPI
 {
     public class User
     {
+        public int id { get; set; }
         public String Name { get; }
         public String Lastname { get; }
         public String Email { get; }

@@ -16,7 +16,23 @@ namespace TechonlineAPI
 
         public void AddToCart(Product p)
         {
-            this.CartItems.Add(new CartItem(p, 1));
+            bool alreadyInCart = false;
+            
+            foreach (CartItem item in CartItems)
+            {
+                if (item.product.id == p.id)
+                {
+                    item.quantity++;
+                    alreadyInCart = true;
+                    break;
+                }
+            }
+
+            if(!alreadyInCart)
+            {
+                this.CartItems.Add(new CartItem(p, 1));
+            }
+            
         }
 
         public void AddToCart(Product p, int quantity)
@@ -57,6 +73,18 @@ namespace TechonlineAPI
         public double GetTotalWithoutShipping()
         {
             return Math.Abs(this.GetTotalPrice() - this.GetTotalShippingPrice());
+        }
+
+        public int TotalCount()
+        {
+            int total = 0;
+
+            foreach(CartItem i in CartItems)
+            {
+                total += i.quantity;
+            }
+
+            return total;
         }
 
 

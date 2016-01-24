@@ -25,7 +25,6 @@
         			    <thead>
         				    <tr>
 							    <th class="table-title">Product Name</th>
-							    <th class="table-title">Product Code</th>
 							    <th class="table-title">Unit Price</th>
 							    <th class="table-title">Quantity</th>
 							    <th class="table-title">SubTotal</th>
@@ -66,8 +65,8 @@
         				    </tfoot>
         			    </table>
         			    <div class="md-margin"></div><!-- End .space -->
-        			    <a href="#" class="btn btn-custom-2">CONTINUE SHOPPING</a>
-        			    <a href="#" class="btn btn-custom">CHECKOUT</a>
+        			    <a href="Shop.aspx" class="btn btn-custom-2">CONTINUE SHOPPING</a>
+        			    <a href="Checkout.aspx" class="btn btn-custom">CHECKOUT</a>
         		    </div><!-- End .col-md-4 -->
         	    </div><!-- End .row -->
             </div><!-- End .col-md-12 -->

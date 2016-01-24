@@ -123,7 +123,7 @@
                                         </ul>
                                             
                                         <ul class="dropdown-cart-total">
-                                            <li><span class="dropdown-cart-total-title">Shipping:</span>$<asp:Label ID="lblPriceShipping" runat="server" Text="0.00"></asp:Label></li>
+                                           <!-- <li><span class="dropdown-cart-total-title">Shipping:</span>$<asp:Label ID="lblPriceShipping" runat="server" Text="0.00"></asp:Label></li> -->
                                             <li><span class="dropdown-cart-total-title">Total:</span>$<asp:Label ID="lblPriceTotal" CssClass="sub-price" runat="server" Text="0.00"></asp:Label></li>
                                         </ul><!-- .dropdown-cart-total -->
                                         <div class="dropdown-cart-action">

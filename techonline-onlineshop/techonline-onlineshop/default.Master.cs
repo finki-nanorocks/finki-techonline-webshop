@@ -21,6 +21,9 @@ namespace TechonlineFrontend
                 if (!string.IsNullOrWhiteSpace(Request.QueryString["deleteCartItem"]))
                 {
                     this.removeCartItem();
+                    string redirect = TOS.Instance.getUrlWithoutQS(this.Context);
+                    Response.Redirect(redirect, false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
 
                 // Update cart
@@ -58,7 +61,8 @@ namespace TechonlineFrontend
                 {
                     TOSession.Current.cart.AddToCart(p);
                     string redirect = Request.RawUrl.Substring(0, Request.RawUrl.IndexOf("?"));
-                    Response.Redirect(redirect + "?atc_status=1");
+                    Response.Redirect(redirect + "?atc_status=1", false);
+                    Context.ApplicationInstance.CompleteRequest();
                 }
                 else
                 {
@@ -75,9 +79,9 @@ namespace TechonlineFrontend
             {
                 ShoppingCart currentCart = TOSession.Current.cart;
                 ulCartDropdown.InnerHtml = HtmlGenerator.NEWCartDropdownItemHTML(currentCart.CartItems, HttpContext.Current);
-                lblCartItemCount.Text = Convert.ToString(currentCart.CartItems.Count);
+                lblCartItemCount.Text = Convert.ToString(currentCart.TotalCount());
                 lblCartPrice.Text = Convert.ToString(currentCart.GetTotalPrice());
-                lblPriceShipping.Text = Convert.ToString(currentCart.GetTotalShippingPrice());
+               // lblPriceShipping.Text = Convert.ToString(currentCart.GetTotalShippingPrice());
                 lblPriceTotal.Text = Convert.ToString(currentCart.GetTotalWithoutShipping());
             }
             else

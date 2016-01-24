@@ -106,6 +106,7 @@ namespace TechonlineAPI
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.Read())
                     {
+                        int id = Convert.ToInt32(reader["id"]);
                         String name = Convert.ToString(reader["name"]);
                         String lastname = Convert.ToString(reader["lastname"]);
                         String _email = Convert.ToString(reader["email"]);
@@ -113,6 +114,7 @@ namespace TechonlineAPI
                         String signup_date = Convert.ToString(reader["signup_date"]);
 
                         user = new User(name, lastname, _email, type, signup_date);
+                        user.id = id;
 
                         if (includePassword)
                         {
@@ -281,10 +283,62 @@ namespace TechonlineAPI
             return products;
         }
 
+        public bool insertOrder(int user_id, int product_id, int quantity, string payment_method, string shipping_address, string shipping_city, string shipping_postal, string shipping_country)
+        {
+            int affected = 0;
+
+            String istr = "INSERT INTO orders (user_id, product_id, quantity, payment_method, shipping_address, shipping_city, shipping_postal, shipping_country, date) VALUES(@user_id, @product_id, @quantity, @payment_method, @shipping_address, @shipping_city, @shipping_postal, @shipping_country, @date)";
+            using (SqlCommand cmd = new SqlCommand(istr, connection))
+            {
+                cmd.Parameters.AddWithValue("@user_id", user_id);
+                cmd.Parameters.AddWithValue("@product_id", product_id);
+                cmd.Parameters.AddWithValue("@quantity", quantity);
+                cmd.Parameters.AddWithValue("@payment_method", payment_method);
+                cmd.Parameters.AddWithValue("@shipping_address", shipping_address);
+                cmd.Parameters.AddWithValue("@shipping_city", shipping_city);
+                cmd.Parameters.AddWithValue("@shipping_postal", shipping_postal);
+                cmd.Parameters.AddWithValue("@shipping_country", shipping_country);
+                cmd.Parameters.AddWithValue("@date", DateTime.Now);
+
+                try
+                {
+                    affected = cmd.ExecuteNonQuery();
+                }
+                catch(Exception e)
+                {
+                    this.Debug("ERROR INSERT ORDER");
+                    return false;
+                }
+            }
+
+            return affected > 0;
+        }
+
         public String getFullProductImagePath(String path, HttpContext current)
         {
             string siteUrl = current.Request.Url.Scheme + "://" + current.Request.Url.Authority + current.Request.ApplicationPath.TrimEnd('/');
             return siteUrl + TOS.LAPTOPS_IMG_URL + path;
+        }
+
+        public String getUrlWithoutQS(HttpContext current)
+        {
+            string rawurl = current.Request.RawUrl;
+            bool hasQuestionMark = false;
+            for(int i = 0; i < rawurl.Length; i++)
+            {
+                if (rawurl[i].Equals('?'))
+                {
+                    hasQuestionMark = true;
+
+                }
+            }
+
+            if(hasQuestionMark)
+            {
+                string current_url = current.Request.RawUrl.Substring(0, current.Request.RawUrl.IndexOf("?"));
+                return current_url;
+            }
+            return rawurl;
         }
 
 
