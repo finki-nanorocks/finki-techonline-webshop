@@ -20,20 +20,6 @@ namespace TechonlineFrontend
                 if(TOSession.Current.user != null)
                 {
 
-                    //Checkout results
-                    if(Request.QueryString["status"] != null && Convert.ToString(Request.QueryString["status"]).Equals("1"))
-                    {
-                        checkoutStatus.InnerHtml = HtmlGenerator.success("Order successful. Please wait for our confirmation!");
-                    }
-                    else if(Request.QueryString["status"] != null && Convert.ToString(Request.QueryString["status"]).Equals("400"))
-                    {
-                        checkoutStatus.InnerHtml = HtmlGenerator.error("Error inserting into database! Please contact tech support for assistance");
-                    }
-                    else if (Request.QueryString["status"] != null && Convert.ToString(Request.QueryString["status"]).Equals("404"))
-                    {
-                        checkoutStatus.InnerHtml = HtmlGenerator.error("Please fill all the fields and try again!");
-                    }
-
                     //Set user id in the checkout form
                     HtmlInputHidden checkoutUserId = new HtmlInputHidden();
                     checkoutUserId.ID = "checkoutUserId";
@@ -60,8 +46,22 @@ namespace TechonlineFrontend
 
             }
 
-      
-            if(!String.IsNullOrWhiteSpace(Request.Form["submitted"]) && Request.Form["submitted"].Equals("1"))
+
+            //Checkout results
+            if (Request.QueryString["status"] != null && Convert.ToString(Request.QueryString["status"]).Equals("1"))
+            {
+                checkoutStatus.InnerHtml = HtmlGenerator.success("Order successful. Please wait for our confirmation!");
+            }
+            else if (Request.QueryString["status"] != null && Convert.ToString(Request.QueryString["status"]).Equals("400"))
+            {
+                checkoutStatus.InnerHtml = HtmlGenerator.error("Error inserting into database! Please contact tech support for assistance");
+            }
+            else if (Request.QueryString["status"] != null && Convert.ToString(Request.QueryString["status"]).Equals("404"))
+            {
+                checkoutStatus.InnerHtml = HtmlGenerator.error("Please fill all the fields and try again!");
+            }
+
+            if (!String.IsNullOrWhiteSpace(Request.Form["submitted"]) && Request.Form["submitted"].Equals("1"))
             {
                 //Response.Write("<script>alert('FORM SUBMITTED!!');</script>");
 
@@ -92,6 +92,7 @@ namespace TechonlineFrontend
                     }
                     else
                     {
+                        TOSession.Current.cart = new ShoppingCart();
                         Response.Redirect("Checkout.aspx?status=1", false);
                         Context.ApplicationInstance.CompleteRequest();
                     }

@@ -41,7 +41,7 @@ namespace TechonlineFrontend
                     }
 
                     //Validate password
-                    if (Request["regpass"].Length < 6)
+                    if (Convert.ToString(Request["regpass"]).Length < 6)
                     {
                         valid = false;
                     }
@@ -51,22 +51,35 @@ namespace TechonlineFrontend
                 //Everything valid. Go on
                 if (valid)
                 {
-                    bool registrationStatus = TOS.Instance.register(
-                        Request["regfirstname"], 
-                        Request["reglastname"], 
-                        Request["regemail"], 
-                        Request["regpass"], 
-                        "regular"
-                    );
-
-                    if (registrationStatus)
+                    if (!TOS.Instance.isUserRegistred(Convert.ToString(Request["regemail"])))
                     {
-                        Response.Redirect("registration.aspx?action=success", false);
+                        TOS.Instance.Debug("HERE HERE HERE");
+                        bool registrationStatus = TOS.Instance.register(
+                            Convert.ToString(Request["regfirstname"]),
+                            Convert.ToString(Request["reglastname"]),
+                            Convert.ToString(Request["regemail"]),
+                            Convert.ToString(Request["regpass"]),
+                            "regular"
+                        );
+
+                        if (registrationStatus)
+                        {
+                            Response.Redirect("registration.aspx?action=success", false);
+                            Context.ApplicationInstance.CompleteRequest();
+                        }
+                    }
+                    else
+                    {
+                        Response.Redirect("registration.aspx?action=exists", false);
                         Context.ApplicationInstance.CompleteRequest();
                     }
+
                 }
-                Response.Redirect("registration.aspx?action=danger", false);
-                Context.ApplicationInstance.CompleteRequest();
+                else
+                {
+                    Response.Redirect("registration.aspx?action=danger", false);
+                    Context.ApplicationInstance.CompleteRequest();
+                }
             }
 
             //Get requests
@@ -80,6 +93,12 @@ namespace TechonlineFrontend
             {
                 actionStatus.Attributes["class"] = "alert alert-danger";
                 actionStatus.InnerHtml = "<strong>Error!</strong> Please check your form again. Valid password with over 6 characters and email are required.";
+            }
+
+            if (!string.IsNullOrWhiteSpace(Request.QueryString["action"]) && string.Equals(Request.QueryString["action"], "exists"))
+            {
+                actionStatus.Attributes["class"] = "alert alert-danger";
+                actionStatus.InnerHtml = "<strong>Error!</strong> Account with that email already exits.";
             }
 
         }

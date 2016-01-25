@@ -14,30 +14,60 @@
 
     <div class="container">
     <div class="row">
-          <div class="col-sm-12">
+         <div class="col-sm-4 col-xs-12">
+             <h3 id="accountName" style="text-align:center" runat="server"></h3>
+            <img src="images/placeholder.png" width="100%"/>
+         </div>
+          <div class="col-sm-8 col-xs-12">
               <h1>Change Account Password</h1>
               <p>Here you can change your account password</p>
               <div class="passwordStatus" runat="server" id="passwordStatus"></div>
-              <form action="" method="post">
+              <form runat="server" id='cpform' action="" method="post">
                     <div class="input-group input-group-sm">
                         <span class="input-group-addon"><span class="input-icon input-icon-user"></span><span class="input-text">Email</span></span>
-                        <input type="text" placeholder="Email" class="form-control">
+                        <input type="text" disabled placeholder="Email" name="useremail" id="useremail" runat="server" class="form-control"/>
                     </div>
                      <div class="input-group input-group-sm">
                         <span class="input-group-addon"><span class="input-icon input-icon-user"></span><span class="input-text">Old password</span></span>
-                        <input type="text" placeholder="Old Password" class="form-control">
+                        <input type="password" required placeholder="Old Password" id="useroldpass" name="useroldpass" class="form-control"/>
                     </div>
                      <div class="input-group input-group-sm">
                         <span class="input-group-addon"><span class="input-icon input-icon-user"></span><span class="input-text">New password</span></span>
-                        <input type="text" placeholder="New Password" class="form-control">
+                        <input type="password" required placeholder="New Password" id="usernewpass" name="usernewpass" class="form-control"/>
                     </div>
                     <div class="input-group input-group-sm">
-                        <span class="input-group-addon"><span class="input-icon input-icon-user"></span><span class="input-text">Confirm New password</span></span>
-                        <input type="text" placeholder="Confirm New Password" class="form-control">
+                        <span class="input-group-addon"><span class="input-icon input-icon-user"></span><span class="input-text">Confirm password</span></span>
+                        <input type="password" required placeholder="Confirm Password" id="userconfirmpass" name="userconfirmpass" class="form-control"/>
                     </div>
-                    <input type="submit" class="btn btn-info" name="submitted" value="1"/>
+                    <input type="hidden" name="user_email" id="user_email" runat="server"/>
+                    <input type="submit" class="btn btn-info" name="submitted" value="Change"/>
               </form>
           </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <hr />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Previous Purchases</h1>
+			<div class="table-responsive">
+           		<table class="table cart-table">
+        		<thead>
+        			<tr>
+                        <th class="table-title">Order #</th>
+						<th class="table-title">Product Name</th>
+						<th class="table-title">Product Price</th>
+						<th class="table-title">Quantity</th>
+						<th class="table-title">SubTotal</th>
+                        <th class="table-title">Date</th>
+        			</tr>
+        		</thead>
+				<tbody ID="tblPreviousPurchases" runat="server"></tbody>
+				</table>	
+			</div><!-- End .table-reponsive-->
+        </div>
     </div>
     </div>
 </section>

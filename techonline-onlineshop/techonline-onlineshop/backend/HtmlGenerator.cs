@@ -91,6 +91,24 @@ namespace TechonlineAPI
             return html;
         }
 
+        public static string NEWPreviousPurchasesTable(List<Order> orders, HttpContext context)
+        {
+            String html = "";
+            foreach(Order o in orders)
+            {
+                Product p = TOS.Instance.getProduct(o.product_id);
+                html += "<tr>";
+                html += "<td>" + o.order_id + "</td>";
+                html += "<td>" + p.name + "</td>";
+                html += "<td> $" + p.price + "</td>";
+                html += "<td>" + o.quantity + "</td>";
+                html += "<td>" + o.quantity * p.price +  "</td>";
+                html += "<td>" + o.date + "</td>";
+                html += "</tr>";
+            }
+            return html;
+        }
+
         public static string success(String msg)
         {
             return "<div class='alert alert-success fade in'><a href='#' class='close' data-dismiss='alert'>&times;</a><strong>Success!</strong> " + msg + "</div>";

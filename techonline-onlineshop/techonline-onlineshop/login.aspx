@@ -29,7 +29,7 @@
     </div>
 
 	<div class="element-input"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="e-mail" ID="loginemail" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
-	<div class="element-password"><label class="title"></label><div class="item-cont"><asp:TextBox runat="server" placeholder="password" ID="loginpassword" class="large"></asp:TextBox><span class="icon-place"></span></div></div>
+	<div class="element-password"><label class="title"></label><div class="item-cont"><input type="password" runat="server" placeholder="password" name='loginpassword' ID="loginpassword" class="large"/><span class="icon-place"></span></div></div>
 	<div ><label class="title"></label><div class="item-cont"><asp:Label runat="server" placeholder="" ID="TextBox1" class="large"></asp:Label><span class="icon-place"></span></div></div><br />
      <div class="element-checkbox"><label class="title"></label><div class="column column1"><label><input type="checkbox" name="checkbox[]" value="remember me" /><span>remember me</span></label></div><span class="clearfix"></span>
     </div>

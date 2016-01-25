@@ -1,20 +1,22 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/default.Master" AutoEventWireup="true" CodeBehind="Shop.aspx.cs" Inherits="TechonlineFrontend.Shop" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <form id="form1" runat="server">
+
     <section id="content">
-    <div id="category-breadcrumb">
+
+
+     <div id="breadcrumb-container">
         <div class="container">
-		    <ul class="breadcrumb">
-			    <li><a href="home.aspx">Home</a></li>
-			    <li class="active">Shop</li>
-		    </ul>
+            <ul class="breadcrumb">
+	            <li><a href="home.aspx">Home</a></li>
+	            <li class="active">Shop</li>
+            </ul>
         </div>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-        				
-        	    <div class="row">
+        			
         					
         		    <div class="col-md-9 col-sm-8 col-xs-12 main-content">
         				 <div class="displaymsgs" runat="server" id="displaymsgs"></div>		
@@ -40,12 +42,10 @@
 							    </div><!-- #collapse -->
 							    </div><!-- End .panel -->
         		    </aside><!-- End .col-md-3 -->
-        	    </div><!-- End .row -->
         				
         				
             </div><!-- End .col-md-12 -->
         </div><!-- End .row -->
     </div><!-- End .container -->
 </section>
-</form>
 </asp:Content>

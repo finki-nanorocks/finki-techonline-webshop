@@ -198,6 +198,7 @@
     <Compile Include="backend\Brand.cs" />
     <Compile Include="backend\CartItem.cs" />
     <Compile Include="backend\HtmlGenerator.cs" />
+    <Compile Include="backend\Order.cs" />
     <Compile Include="backend\TOS.cs" />
     <Compile Include="backend\Product.cs" />
     <Compile Include="backend\ShoppingCart.cs" />

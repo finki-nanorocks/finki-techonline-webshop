@@ -140,21 +140,19 @@ namespace TechonlineAPI
         {
             int affected = 0;
 
-            if (!isUserRegistred(email))
-            {
-                String istr = "INSERT users (name, lastname, email, password, signup_date, type) VALUES(@name, @lastname, @email, @password, @now, @type)";
-                using (SqlCommand cmd = new SqlCommand(istr, connection))
-                {
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@lastname", lastname);
-                    cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@password", password);
-                    cmd.Parameters.AddWithValue("@type", type);
-                    cmd.Parameters.AddWithValue("@now", DateTime.Now.ToString("MMM dd HH:mm:ss"));
-                    affected = cmd.ExecuteNonQuery();
-                }
 
+            String istr = "INSERT users (name, lastname, email, password, signup_date, type) VALUES(@name, @lastname, @email, @password, @now, @type)";
+            using (SqlCommand cmd = new SqlCommand(istr, connection))
+            {
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@lastname", lastname);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@password", password);
+                cmd.Parameters.AddWithValue("@type", type);
+                cmd.Parameters.AddWithValue("@now", DateTime.Now.ToString("MMM dd HH:mm:ss"));
+                affected = cmd.ExecuteNonQuery();
             }
+
             return affected > 0;
         }
 
@@ -312,6 +310,64 @@ namespace TechonlineAPI
             }
 
             return affected > 0;
+        }
+
+        public List<Order> getUserOrders(int user_id)
+        {
+            String query = "SELECT * FROM orders WHERE orders.user_id=@uid ORDER BY orders.date DESC";
+            List<Order> orders = new List<Order>();
+
+            using (SqlCommand cmd = new SqlCommand(query, connection))
+            {
+                cmd.Parameters.AddWithValue("@uid", user_id);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int order_id = Convert.ToInt32(reader["order_id"]);
+                    int product_id = Convert.ToInt32(reader["product_id"]);
+                    int qty = Convert.ToInt32(reader["quantity"]);
+                    string payment_method = Convert.ToString(reader["payment_method"]);
+                    string shipping_city = Convert.ToString(reader["shipping_city"]);
+                    string shipping_address = Convert.ToString(reader["shipping_address"]);
+                    string shipping_postal = Convert.ToString(reader["shipping_postal"]);
+                    string shipping_country = Convert.ToString(reader["shipping_country"]);
+                    string date = Convert.ToString(reader["date"]);
+                    Order o = new Order(order_id, product_id, qty, payment_method, shipping_city , shipping_address, shipping_postal, shipping_country, date);
+                    orders.Add(o);
+                }
+                reader.Close();
+            }
+            return orders;
+        }
+
+        public bool ChangePassword(string user_email, string oldpassword, string newpassword)
+        {
+            int affected = 0;
+
+            User usr = this.getUser(user_email, true);
+
+            if(usr != null && usr.Password.Equals(oldpassword))
+            {
+                String istr = "UPDATE users SET password=@password WHERE email=@user_email";
+                using (SqlCommand cmd = new SqlCommand(istr, connection))
+                {
+                    cmd.Parameters.AddWithValue("@user_email", user_email);
+                    cmd.Parameters.AddWithValue("@password", newpassword);
+                    try
+                    {
+                        affected = cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception e)
+                    {
+                        this.Debug("ERROR UPDATING PASSWORD");
+                        return false;
+                    }
+                }
+                return affected > 0;
+            }
+            return false;
+
+
         }
 
         public String getFullProductImagePath(String path, HttpContext current)
