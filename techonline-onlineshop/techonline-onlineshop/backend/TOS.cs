@@ -18,7 +18,7 @@ namespace TechonlineAPI
 
         //Connection related
         private String connectionString { get; set; }
-        private SqlConnection connection { get; } = null;
+        private SqlConnection connection { get; set; }
 
         //Constructor
         private TOS()

@@ -45,8 +45,7 @@ namespace TechonlineFrontend
                 {
                     TOSession.Current.user = null;
                     Response.Write("<script>alert('You have been logged out successfully!');</script>");
-                    String urlWithoutQueryString = HttpContext.Current.Request.Url.AbsoluteUri.Substring(0, HttpContext.Current.Request.Url.AbsoluteUri.IndexOf("?"));
-                    Response.Redirect(urlWithoutQueryString, false);
+                    Response.Redirect("home.aspx", false);
                     Context.ApplicationInstance.CompleteRequest();
                 }
                 

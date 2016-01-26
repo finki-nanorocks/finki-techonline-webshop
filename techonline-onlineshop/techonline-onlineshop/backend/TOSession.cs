@@ -9,7 +9,11 @@ namespace TechonlineFrontend
     public class TOSession
     {
         // private constructor
-        private TOSession() { }
+        private TOSession() 
+        {
+            this.user = null;
+            this.cart = new ShoppingCart();
+        }
 
         // Gets the current session.
         public static TOSession Current
@@ -26,8 +30,8 @@ namespace TechonlineFrontend
             }
         }
 
-        public User user { get; set; } = null;
-        public ShoppingCart cart { get; set; } = new ShoppingCart(); 
+        public User user { get; set; }
+        public ShoppingCart cart { get; set; }
     }
 }
 

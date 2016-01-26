@@ -177,7 +177,9 @@
     <Content Include="servis_korisnik.asmx" />
     <Content Include="ShowProduct.aspx" />
     <Content Include="Shop.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="WebConnections.config" />
   </ItemGroup>
   <ItemGroup>
@@ -303,9 +305,11 @@
     <Content Include="forms_all\formoid1\icons.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <ItemGroup>

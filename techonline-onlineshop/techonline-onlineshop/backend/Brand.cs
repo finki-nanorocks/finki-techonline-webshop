@@ -7,9 +7,13 @@ namespace TechonlineFrontend.backend
 {
     public class Brand
     {
-        public int id { get; }
-        public String name { get; }
-        public int total { get; }
+        
+        private int _id;
+        private String _name;
+        private int _total;
+        public int id { get { return _id; } set { _id = value; } }
+        public String name { get { return _name; } set { _name = value; } }
+        public int total { get { return _total; } set { _total = value; } }
 
         public Brand(int id, String name, int total)
         {

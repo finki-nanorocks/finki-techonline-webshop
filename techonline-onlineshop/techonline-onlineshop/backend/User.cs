@@ -8,12 +8,12 @@ namespace TechonlineAPI
     public class User
     {
         public int id { get; set; }
-        public String Name { get; }
-        public String Lastname { get; }
-        public String Email { get; }
-        public String Password { get; set; } = null;
+        public String Name { get; set; }
+        public String Lastname { get; set; }
+        public String Email { get; set; }
+        public String Password { get; set; }
         public String Type { get; set; }
-        public String RegistredOn { get;  }
+        public String RegistredOn { get; set; }
         public bool isAdmin {
             get {
                 return String.Equals(Type.ToLower(), "admin");
