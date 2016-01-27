@@ -174,7 +174,7 @@
     <Content Include="login.aspx" />
     <Content Include="MyAccount.aspx" />
     <Content Include="registration.aspx" />
-    <Content Include="servis_korisnik.asmx" />
+    <Content Include="Service.asmx" />
     <Content Include="ShowProduct.aspx" />
     <Content Include="Shop.aspx" />
     <Content Include="Web.config">
@@ -264,8 +264,8 @@
     <Compile Include="registration.aspx.designer.cs">
       <DependentUpon>registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="servis_korisnik.asmx.cs">
-      <DependentUpon>servis_korisnik.asmx</DependentUpon>
+    <Compile Include="Service.asmx.cs">
+      <DependentUpon>Service.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="ShowProduct.aspx.cs">

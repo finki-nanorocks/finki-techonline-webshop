@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.ComponentModel.DataAnnotations;
-using TechonlineFrontend.backend;
 using System.Web;
 
 namespace TechonlineAPI

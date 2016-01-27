@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using TechonlineAPI;
 using System.Data.SqlClient;
 using System.Configuration;
-using TechonlineFrontend.backend;
+using TechonlineAPI;
 
 namespace TechonlineFrontend
 {

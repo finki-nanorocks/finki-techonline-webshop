@@ -61,6 +61,10 @@ namespace TechonlineAPI
             this.discount = discount;
         }
 
+        public Product()
+        {
+
+        }
 
         public String getHdd()
         {

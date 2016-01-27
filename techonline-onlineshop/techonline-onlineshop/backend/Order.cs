@@ -30,6 +30,11 @@ namespace TechonlineAPI
             this.shipping_country = shipping_country;
             this.date = date;
         }
+
+        public Order()
+        {
+
+        }
     }
 
 }

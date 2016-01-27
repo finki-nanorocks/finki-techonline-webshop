@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace TechonlineFrontend.backend
+namespace TechonlineAPI
 {
     public class Brand
     {
@@ -20,6 +20,11 @@ namespace TechonlineFrontend.backend
             this.id = id;
             this.name = name;
             this.total = total;
+        }
+
+        public Brand()
+        {
+
         }
     }
 }

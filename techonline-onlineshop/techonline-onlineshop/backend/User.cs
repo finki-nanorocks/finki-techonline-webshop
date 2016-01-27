@@ -30,5 +30,10 @@ namespace TechonlineAPI
             this.RegistredOn = RegistredOn;
         }
 
+        public User()
+        {
+
+        }
+
     }
 }
