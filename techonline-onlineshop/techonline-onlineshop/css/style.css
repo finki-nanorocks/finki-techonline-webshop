@@ -4,3 +4,12 @@
  .item-name-col img {
     max-width: 70px !important;
 }
+ .brand-slider
+ {
+
+ }
+ .brand-slider a
+ {
+     width:70%;
+     margin-bottom:50px;
+ }
