@@ -18,7 +18,7 @@
 				    </div>
                             
                     <div class="tp-caption sfb stb" data-x="610" data-y="395" data-speed="1200" data-start="1800" data-easing="Power3.easeIn" data-endspeed="300">
-                        <a href="#" class="btn btn-custom-2">Buy now</a>
+                        <a href="Shop.aspx" class="btn btn-custom-2">Buy now</a>
                     </div>
                 </li>
 						
@@ -31,7 +31,7 @@
 				    data-endspeed="300">Take your web browsing and reading experience to the next level with the Galaxy Tab S2. Its 4:3 aspect ratio screen is ideal for reading books, magazines and newspapers, as well as surfing the net.</div>
                             
                     <div class="tp-caption sfb stb" data-x="70" data-y="395" data-speed="1200" data-start="1800" data-easing="Power3.easeIn" data-endspeed="300">
-                        <a href="#" class="btn btn-custom-2">Buy now</a>
+                        <a href="Shop.aspx" class="btn btn-custom-2">Buy now</a>
                     </div>
 				    <div class="tp-caption lfb ltb" data-x="570" data-y="50" data-speed="1200" data-start="600" data-easing="Expo.easeOut">
                         <a href="#"><img src="images/homeslider/30.png" alt="slide3_1" width="560" height="600"></a>
@@ -50,7 +50,7 @@
 				    data-endspeed="300">Purposeful innovation meets powerful performance with the LG G Flex. Discover the world’s first curved, flexible smartphone and see why the LG flexible screen phone is the shape of innovation.</div>
                             
                     <div class="tp-caption sfb stb" data-x="610" data-y="395" data-speed="1200" data-start="1800" data-easing="Power3.easeIn" data-endspeed="300">
-                        <a href="#" class="btn btn-custom-2">Buy now</a>
+                        <a href="Shop.aspx" class="btn btn-custom-2">Buy now</a>
                     </div>
                 </li>
                    <li data-transition="fade">
@@ -62,7 +62,7 @@
 				    data-endspeed="300">The Acer Aspire V5-571-6869 ($649.99 direct) laptop may not wow you with fancy features or premium performance, but it will definitely help you save a few bucks.</div>
                             
                     <div class="tp-caption sfb stb" data-x="70" data-y="395" data-speed="1200" data-start="1800" data-easing="Power3.easeIn" data-endspeed="300">
-                        <a href="#" class="btn btn-custom-2">Buy now</a>
+                        <a href="Shop.aspx" class="btn btn-custom-2">Buy now</a>
                     </div>
 				    <div class="tp-caption lfb ltb" data-x="570" data-y="50" data-speed="1200" data-start="600" data-easing="Expo.easeOut">
                         <a href="#"><img src="images/homeslider/10.png" alt="slide3_1" width="560" height="600"></a>
@@ -81,7 +81,7 @@
 				    data-endspeed="300">Lenovo B6000-YOGA MediaTek 1.2 GHz quad-core/ 8” HD IPS 1280 x 800/ 1G/ 16G e-MMC/microSD up to 64 GB/ Bluetooth/ microUSB v2.0/ WiFi/ 6000 mAh Li-Ion Polymer/ 1.6 MP HD Front camera/ 5.0 MP Auto focus rear camera/ Android OS, v4.2 (Jelly Bean)</div>
                             
                     <div class="tp-caption sfb stb" data-x="610" data-y="395" data-speed="1200" data-start="1800" data-easing="Power3.easeIn" data-endspeed="300">
-                        <a href="#" class="btn btn-custom-2">Buy now</a>
+                        <a href="Shop.aspx" class="btn btn-custom-2">Buy now</a>
                     </div>
                 </li>  
 
@@ -120,5 +120,33 @@
             </ul>
         </div><!-- End #slider-rev -->
     </div><!-- End #slider-rev-container -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div style="margin-top:50px;" id="brand-slider-container" class="carousel-wrapper">
+        			<header class="content-title">
+						<div class="title-bg">
+							<h2 class="title">Partners</h2>
+						</div><!-- End .title-bg -->
+					</header>
+                        <div class="carousel-controls">
+                            <div id="brand-slider-prev" class="carousel-btn carousel-btn-prev">
+                            </div><!-- End .carousel-prev -->
+                            <div id="brand-slider-next" class="carousel-btn carousel-btn-next carousel-space">
+                            </div><!-- End .carousel-next -->
+                        </div><!-- End .carousel-controllers -->
+                        <div class="sm-margin"></div><!-- space -->
+                        <div class="brand-slider owl-carousel">
+                            <a href="http://www.asus.com/" target="_blank"><img src="images/brands/asus.png" alt="ASUS"></a>
+                            <a href="http://www.samsung.com/rs/home/" target="_blank"><img src="images/brands/samsung.png" alt="Samsung"></a>
+                            <a href="http://us.acer.com/ac/en/US/content/home#_ga=1.235586889.938907449.1442173143" target="_blank"><img src="images/brands/acer.png" alt="Acer"></a>
+                            <a href="http://www.sony.com.mk/" target="_blank"><img src="images/brands/sony.png" alt="Sony"></a>
+                            <a href="https://www.apple.com" target="_blank"><img src="images/brands/apple.png" alt="Apple"></a>
+                            <a href="http://www.lg.com/rs" target="_blank"><img src="images/brands/lg.png" alt="LG"></a>
+                        </div><!-- End .brand-slider -->
+        		</div><!-- End #brand-slider-container -->
+            </div>
+        </div>
+    </div>
 </section>
 </asp:Content>

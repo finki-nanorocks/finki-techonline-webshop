@@ -34,7 +34,7 @@ namespace TechonlineFrontend
             //Set header
             if (TOSession.Current.user != null)
             {
-                headerWelcomeText.InnerHtml = "Welcome to Techonline, " + TOSession.Current.user.Name + "! ";
+                headerWelcomeText.InnerHtml = "Welcome to Techonline, <strong>" + TOSession.Current.user.Name + "</strong>!";
                 headerLoginLogoutLinks.InnerHtml = "<a href='" + HttpContext.Current.Request.Url.AbsoluteUri + "?logout=true'>Logout</a>";
             }
 
